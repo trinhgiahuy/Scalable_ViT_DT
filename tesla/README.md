@@ -1,6 +1,6 @@
-## ECE Tesla Machine Distributed Training
+## ECE Tesla Machine Distributed Training (Inter-Node)
 
-This directory includes code of distributed training on Tesla machine.
+This directory includes code of distributed training on Tesla machine (inter-node).
 
 ### SETUP
 
