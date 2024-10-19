@@ -7,15 +7,15 @@ This directory includes code of distributed training on Tesla machine.
 Set up passwordless SSH on 5 Tesla machines (ecetesla[0-4]). Default machines use `/bin/tsch` SHELL. First, change `WATID` to your watid and `NEWSHELL` to zsh. Then run
 
 ```sh
-bash setup/change_shell_cn.sh
+bash setup/change_cn_shell.sh
 ```
 
 The script will also check for new updated shell.
 
-Then run `test_cn_connection.sh` and make sure all 5 Tesla machines can retrieve the GPU information
+Then change also `WATID` in `test_cn_connection.sh`, run the script, and make sure all 5 Tesla machines can retrieve the GPU information
 
 ```sh
-bash setup/test_cn_connection.sh`
+bash setup/test_cn_connection.sh
 ```
 
 You can also check their hostname, for example by this command

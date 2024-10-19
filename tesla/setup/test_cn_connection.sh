@@ -1,6 +1,6 @@
 #!/bin/bash
 
-watid=h3trinh
+WATID=h3trinh
 # List of Tesla nodes
 nodes=("ecetesla0" "ecetesla1" "ecetesla2" "ecetesla3" "ecetesla4")
 
@@ -20,11 +20,11 @@ for host in "${nodes[@]}"; do
     #fi
 
     # Check NVCC version
-    ssh $watid@$host "nvcc --version"
+    ssh $WATID@$host "nvcc --version"
 
     # Check NVIDIA GPU status
     # timeout $SSH_TIMEOUT ssh -o BatchMode=yes $host "nvidia-smi"
-    ssh $watid@$host "nvidia-smi"
+    ssh $WATID@$host "nvidia-smi"
 
     echo "Test on $host completed."
     echo "------------------------------------"
