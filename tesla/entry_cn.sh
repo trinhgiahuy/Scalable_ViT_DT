@@ -28,7 +28,7 @@ source /home/$WATID/vit_env/bin/activate
 # python3 /home/$WATID/Scalable_ViT_DT/tesla/script/test_torch_gpu.py
 
 # Uncomment this to test the NCCL between tesla0 and tesla1
-python3 /home/$WATID/Scalable_ViT_DT/tesla/simple_test/test_nccl.py
+# python3 /home/$WATID/Scalable_ViT_DT/tesla/simple_test/test_nccl.py
 
 # Uncomment this to start running dummy example
-# python3 /home/$WATID/Scalable_ViT_DT/tesla/script/baseline_measure.py
+python3 /home/$WATID/Scalable_ViT_DT/tesla/script/baseline_measure.py

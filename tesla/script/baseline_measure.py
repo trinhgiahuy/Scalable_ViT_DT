@@ -8,7 +8,7 @@ import time
 
 # Initialize the distributed process group
 def init_process(rank, size, fn, backend='nccl'):
-    os.environ['MASTER_ADDR'] = '129.97.92.168'  # Replace with actual master node IP
+    os.environ['MASTER_ADDR'] = '129.97.92.168'  # ecetesla0 master node IP
     os.environ['MASTER_PORT'] = '29500'
     dist.init_process_group(backend, rank=rank, world_size=size)
     fn(rank, size)
@@ -62,7 +62,9 @@ def matrix_multiply(rank, size):
 
 if __name__ == "__main__":
     # Size is the number of processes you want to run
-    size = 5
+    size = int(os.environ.get('OMPI_COMM_WORLD_SIZE', 1))  
+    rank = int(os.environ['OMPI_COMM_WORLD_RANK'])  
+    init_process(rank, size, matrix_multiply)
 
-    # Set up distributed processing
-    mp.spawn(init_process, args=(size, matrix_multiply), nprocs=size, join=True)
+    # [NOT USE] Set up distributed processing
+    # mp.spawn(init_process, args=(size, matrix_multiply), nprocs=size, join=True)
