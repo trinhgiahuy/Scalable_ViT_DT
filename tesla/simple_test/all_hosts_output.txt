@@ -1,0 +1,1121 @@
+[BEFORE ALL REDUCE] Rank 3 using GPU 0 has data 1.0
+[BEFORE ALL REDUCE] Rank 1 using GPU 0 has data 1.0
+[BEFORE ALL REDUCE] Rank 2 using GPU 0 has data 1.0
+[BEFORE ALL REDUCE] Rank 4 using GPU 0 has data 1.0
+[BEFORE ALL REDUCE] Rank 0 using GPU 0 has data 1.0
+ecetesla0:2859680:2859680 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla0:2859680:2859680 [0] NCCL INFO NCCL_SOCKET_IFNAME set to ^docker,lo
+ecetesla0:2859680:2859680 [0] NCCL INFO Bootstrap : Using eno1:129.97.92.168<0>
+ecetesla0:2859680:2859680 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+ecetesla0:2859680:2859680 [0] NCCL INFO cudaDriverVersion 12020
+NCCL version 2.20.5+cuda12.4
+ecetesla0:2859680:2859680 [0] NCCL INFO init.cc:1732 Cuda Host Alloc Size 4 pointer 0x7fdbf8a00200
+ecetesla2:3156908:3156908 [0] NCCL INFO cudaDriverVersion 12020
+ecetesla4:340464:340464 [0] NCCL INFO cudaDriverVersion 12020
+ecetesla2:3156908:3156908 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla2:3156908:3156908 [0] NCCL INFO NCCL_SOCKET_IFNAME set to ^docker,lo
+ecetesla2:3156908:3156908 [0] NCCL INFO Bootstrap : Using enp4s0f1:129.97.92.170<0>
+eceTesla1:3164543:3164543 [0] NCCL INFO cudaDriverVersion 12020
+ecetesla2:3156908:3156908 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+ecetesla3:3048178:3048178 [0] NCCL INFO cudaDriverVersion 12020
+ecetesla2:3156908:3156908 [0] NCCL INFO init.cc:1732 Cuda Host Alloc Size 4 pointer 0x7fe1e6e00200
+ecetesla4:340464:340464 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla4:340464:340464 [0] NCCL INFO NCCL_SOCKET_IFNAME set to ^docker,lo
+ecetesla4:340464:340464 [0] NCCL INFO Bootstrap : Using enp4s0f1:129.97.92.171<0>
+ecetesla4:340464:340464 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+ecetesla4:340464:340464 [0] NCCL INFO init.cc:1732 Cuda Host Alloc Size 4 pointer 0x7f8eb4e00200
+eceTesla1:3164543:3164543 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+eceTesla1:3164543:3164543 [0] NCCL INFO NCCL_SOCKET_IFNAME set to ^docker,lo
+eceTesla1:3164543:3164543 [0] NCCL INFO Bootstrap : Using enp4s0f1:129.97.92.169<0>
+eceTesla1:3164543:3164543 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+eceTesla1:3164543:3164543 [0] NCCL INFO init.cc:1732 Cuda Host Alloc Size 4 pointer 0x7f10cae00200
+ecetesla3:3048178:3048178 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla3:3048178:3048178 [0] NCCL INFO NCCL_SOCKET_IFNAME set to ^docker,lo
+ecetesla3:3048178:3048178 [0] NCCL INFO Bootstrap : Using enp0s31f6:129.97.92.187<0>
+ecetesla3:3048178:3048178 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+ecetesla3:3048178:3048178 [0] NCCL INFO init.cc:1732 Cuda Host Alloc Size 4 pointer 0x7f390f800200
+ecetesla4:340464:340504 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+ecetesla4:340464:340504 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla4:340464:340504 [0] NCCL INFO NET/Socket : Using [0]enp4s0f1:129.97.92.171<0>
+ecetesla4:340464:340504 [0] NCCL INFO Using non-device net plugin version 0
+ecetesla4:340464:340504 [0] NCCL INFO Using network Socket
+ecetesla2:3156908:3170749 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+ecetesla2:3156908:3170749 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla2:3156908:3170749 [0] NCCL INFO NET/Socket : Using [0]enp4s0f1:129.97.92.170<0>
+ecetesla2:3156908:3170749 [0] NCCL INFO Using non-device net plugin version 0
+ecetesla2:3156908:3170749 [0] NCCL INFO Using network Socket
+eceTesla1:3164543:3164573 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+eceTesla1:3164543:3164573 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+eceTesla1:3164543:3164573 [0] NCCL INFO NET/Socket : Using [0]enp4s0f1:129.97.92.169<0>
+eceTesla1:3164543:3164573 [0] NCCL INFO Using non-device net plugin version 0
+eceTesla1:3164543:3164573 [0] NCCL INFO Using network Socket
+ecetesla3:3048178:3074106 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+ecetesla3:3048178:3074106 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla3:3048178:3074106 [0] NCCL INFO NET/Socket : Using [0]enp0s31f6:129.97.92.187<0>
+ecetesla3:3048178:3074106 [0] NCCL INFO Using non-device net plugin version 0
+ecetesla3:3048178:3074106 [0] NCCL INFO Using network Socket
+ecetesla0:2859680:2859715 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 1.
+ecetesla0:2859680:2859715 [0] NCCL INFO NCCL_SOCKET_IFNAME set by environment to ^docker,lo
+ecetesla0:2859680:2859715 [0] NCCL INFO NET/Socket : Using [0]eno1:129.97.92.168<0>
+ecetesla0:2859680:2859715 [0] NCCL INFO Using non-device net plugin version 0
+ecetesla0:2859680:2859715 [0] NCCL INFO Using network Socket
+ecetesla0:2859680:2859715 [0] NCCL INFO comm 0x6cdf060 rank 0 nranks 5 cudaDev 0 nvmlDev 0 busId 17000 commId 0x191d1e1b003301fe - Init START
+ecetesla2:3156908:3170749 [0] NCCL INFO comm 0x8735d10 rank 2 nranks 5 cudaDev 0 nvmlDev 0 busId a000 commId 0x191d1e1b003301fe - Init START
+ecetesla4:340464:340504 [0] NCCL INFO comm 0x801adf0 rank 4 nranks 5 cudaDev 0 nvmlDev 0 busId a000 commId 0x191d1e1b003301fe - Init START
+eceTesla1:3164543:3164573 [0] NCCL INFO comm 0x838cd90 rank 1 nranks 5 cudaDev 0 nvmlDev 0 busId a000 commId 0x191d1e1b003301fe - Init START
+ecetesla3:3048178:3074106 [0] NCCL INFO comm 0x785b100 rank 3 nranks 5 cudaDev 0 nvmlDev 0 busId 1000 commId 0x191d1e1b003301fe - Init START
+eceTesla1:3164543:3164573 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+ecetesla0:2859680:2859715 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'eno1'
+eceTesla1:3164543:3164573 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+eceTesla1:3164543:3164573 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'enp4s0f1'
+eceTesla1:3164543:3164573 [0] NCCL INFO === System : maxBw 1.2 totalBw 24.0 ===
+eceTesla1:3164543:3164573 [0] NCCL INFO CPU/FFFFFFFFFFFFFFFF (1/2/-1)
+eceTesla1:3164543:3164573 [0] NCCL INFO + PCI[24.0] - GPU/A000 (1)
+eceTesla1:3164543:3164573 [0] NCCL INFO + PCI[12.0] - PCI/2000 (102257ad00000000)
+eceTesla1:3164543:3164573 [0] NCCL INFO               + PCI[3.0] - NIC/4000
+eceTesla1:3164543:3164573 [0] NCCL INFO                            + NET[1.2] - NET/0 (0/0/1.250000)
+eceTesla1:3164543:3164573 [0] NCCL INFO ==========================================
+eceTesla1:3164543:3164573 [0] NCCL INFO GPU/A000 :GPU/A000 (0/5000.000000/LOC) CPU/FFFFFFFFFFFFFFFF (1/24.000000/PHB) NET/0 (4/1.250000/PHB) 
+ecetesla0:2859680:2859715 [0] NCCL INFO === System : maxBw 1.2 totalBw 12.0 ===
+ecetesla0:2859680:2859715 [0] NCCL INFO CPU/0 (1/1/2)
+ecetesla0:2859680:2859715 [0] NCCL INFO + PCI[12.0] - GPU/17000 (0)
+ecetesla0:2859680:2859715 [0] NCCL INFO + PCI[3.0] - NIC/1000
+ecetesla0:2859680:2859715 [0] NCCL INFO              + NET[1.2] - NET/0 (0/0/1.250000)
+ecetesla0:2859680:2859715 [0] NCCL INFO ==========================================
+eceTesla1:3164543:3164573 [0] NCCL INFO NET/0 :GPU/A000 (4/1.250000/PHB) CPU/FFFFFFFFFFFFFFFF (3/1.250000/PHB) NET/0 (0/5000.000000/LOC) 
+ecetesla0:2859680:2859715 [0] NCCL INFO GPU/17000 :GPU/17000 (0/5000.000000/LOC) CPU/0 (1/12.000000/PHB) NET/0 (3/1.250000/PHB) 
+ecetesla0:2859680:2859715 [0] NCCL INFO NET/0 :GPU/17000 (3/1.250000/PHB) CPU/0 (2/1.250000/PHB) NET/0 (0/5000.000000/LOC) 
+ecetesla0:2859680:2859715 [0] NCCL INFO Setting affinity for GPU 0 to 0fffffff
+eceTesla1:3164543:3164573 [0] NCCL INFO Pattern 4, crossNic 0, nChannels 1, bw 1.200000/1.200000, type LOC/PHB, sameChannels 1
+eceTesla1:3164543:3164573 [0] NCCL INFO  0 : NET/0 GPU/1 NET/0
+ecetesla0:2859680:2859715 [0] NCCL INFO Pattern 4, crossNic 0, nChannels 1, bw 1.200000/1.200000, type LOC/PHB, sameChannels 1
+ecetesla0:2859680:2859715 [0] NCCL INFO  0 : NET/0 GPU/0 NET/0
+ecetesla0:2859680:2859715 [0] NCCL INFO Pattern 3, crossNic 0, nChannels 1, bw 2.400000/1.200000, type LOC/PHB, sameChannels 1
+ecetesla0:2859680:2859715 [0] NCCL INFO  0 : NET/0 GPU/0 NET/0
+eceTesla1:3164543:3164573 [0] NCCL INFO Pattern 3, crossNic 0, nChannels 1, bw 2.400000/1.200000, type LOC/PHB, sameChannels 1
+eceTesla1:3164543:3164573 [0] NCCL INFO  0 : NET/0 GPU/1 NET/0
+ecetesla2:3156908:3170749 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+ecetesla4:340464:340504 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+ecetesla4:340464:340504 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+ecetesla4:340464:340504 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'enp4s0f1'
+ecetesla2:3156908:3170749 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+ecetesla2:3156908:3170749 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'enp4s0f1'
+ecetesla4:340464:340504 [0] NCCL INFO === System : maxBw 1.2 totalBw 24.0 ===
+ecetesla4:340464:340504 [0] NCCL INFO CPU/FFFFFFFFFFFFFFFF (1/2/-1)
+ecetesla4:340464:340504 [0] NCCL INFO + PCI[24.0] - GPU/A000 (4)
+ecetesla4:340464:340504 [0] NCCL INFO + PCI[12.0] - PCI/2000 (102257ad00000000)
+ecetesla4:340464:340504 [0] NCCL INFO               + PCI[3.0] - NIC/4000
+ecetesla4:340464:340504 [0] NCCL INFO                            + NET[1.2] - NET/0 (0/0/1.250000)
+ecetesla4:340464:340504 [0] NCCL INFO ==========================================
+ecetesla4:340464:340504 [0] NCCL INFO GPU/A000 :GPU/A000 (0/5000.000000/LOC) CPU/FFFFFFFFFFFFFFFF (1/24.000000/PHB) NET/0 (4/1.250000/PHB) 
+ecetesla4:340464:340504 [0] NCCL INFO NET/0 :GPU/A000 (4/1.250000/PHB) CPU/FFFFFFFFFFFFFFFF (3/1.250000/PHB) NET/0 (0/5000.000000/LOC) 
+ecetesla2:3156908:3170749 [0] NCCL INFO === System : maxBw 1.2 totalBw 24.0 ===
+ecetesla2:3156908:3170749 [0] NCCL INFO CPU/FFFFFFFFFFFFFFFF (1/2/-1)
+ecetesla4:340464:340504 [0] NCCL INFO Pattern 4, crossNic 0, nChannels 1, bw 1.200000/1.200000, type LOC/PHB, sameChannels 1
+ecetesla4:340464:340504 [0] NCCL INFO  0 : NET/0 GPU/4 NET/0
+ecetesla2:3156908:3170749 [0] NCCL INFO + PCI[24.0] - GPU/A000 (2)
+ecetesla2:3156908:3170749 [0] NCCL INFO + PCI[12.0] - PCI/2000 (102257ad00000000)
+ecetesla2:3156908:3170749 [0] NCCL INFO               + PCI[3.0] - NIC/4000
+ecetesla2:3156908:3170749 [0] NCCL INFO                            + NET[1.2] - NET/0 (0/0/1.250000)
+ecetesla2:3156908:3170749 [0] NCCL INFO ==========================================
+ecetesla4:340464:340504 [0] NCCL INFO Pattern 3, crossNic 0, nChannels 1, bw 2.400000/1.200000, type LOC/PHB, sameChannels 1
+ecetesla4:340464:340504 [0] NCCL INFO  0 : NET/0 GPU/4 NET/0
+ecetesla2:3156908:3170749 [0] NCCL INFO GPU/A000 :GPU/A000 (0/5000.000000/LOC) CPU/FFFFFFFFFFFFFFFF (1/24.000000/PHB) NET/0 (4/1.250000/PHB) 
+ecetesla2:3156908:3170749 [0] NCCL INFO NET/0 :GPU/A000 (4/1.250000/PHB) CPU/FFFFFFFFFFFFFFFF (3/1.250000/PHB) NET/0 (0/5000.000000/LOC) 
+ecetesla2:3156908:3170749 [0] NCCL INFO Pattern 4, crossNic 0, nChannels 1, bw 1.200000/1.200000, type LOC/PHB, sameChannels 1
+ecetesla2:3156908:3170749 [0] NCCL INFO  0 : NET/0 GPU/2 NET/0
+ecetesla2:3156908:3170749 [0] NCCL INFO Pattern 3, crossNic 0, nChannels 1, bw 2.400000/1.200000, type LOC/PHB, sameChannels 1
+ecetesla2:3156908:3170749 [0] NCCL INFO  0 : NET/0 GPU/2 NET/0
+ecetesla3:3048178:3074106 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+ecetesla3:3048178:3074106 [0] NCCL INFO Topology detection : could not read /sys/devices/pci0000:00/0000:00:1f.6/max_link_speed, ignoring
+ecetesla3:3048178:3074106 [0] NCCL INFO Topology detection : could not read /sys/devices/pci0000:00/0000:00:1f.6/../max_link_speed, ignoring
+ecetesla3:3048178:3074106 [0] NCCL INFO Topology detection : could not read /sys/devices/pci0000:00/0000:00:1f.6/max_link_width, ignoring
+ecetesla3:3048178:3074106 [0] NCCL INFO Topology detection : could not read /sys/devices/pci0000:00/0000:00:1f.6/../max_link_width, ignoring
+ecetesla3:3048178:3074106 [0] NCCL INFO Topology detection : could not read /sys/devices/system/node/node-1/cpumap, ignoring
+ecetesla3:3048178:3074106 [0] NCCL INFO NET/Socket : GPU Direct RDMA Disabled for HCA 0 'enp0s31f6'
+ecetesla3:3048178:3074106 [0] NCCL INFO KV Convert to int : could not find value of '' in dictionary, falling back to 60
+ecetesla3:3048178:3074106 [0] NCCL INFO === System : maxBw 0.1 totalBw 12.0 ===
+ecetesla3:3048178:3074106 [0] NCCL INFO CPU/FFFFFFFFFFFFFFFF (1/1/2)
+ecetesla3:3048178:3074106 [0] NCCL INFO + PCI[12.0] - NIC/1F0
+ecetesla3:3048178:3074106 [0] NCCL INFO               + NET[0.1] - NET/0 (0/0/0.125000)
+ecetesla3:3048178:3074106 [0] NCCL INFO + PCI[12.0] - GPU/1000 (3)
+ecetesla3:3048178:3074106 [0] NCCL INFO ==========================================
+ecetesla3:3048178:3074106 [0] NCCL INFO GPU/1000 :GPU/1000 (0/5000.000000/LOC) CPU/FFFFFFFFFFFFFFFF (1/12.000000/PHB) NET/0 (3/0.125000/PHB) 
+ecetesla3:3048178:3074106 [0] NCCL INFO NET/0 :GPU/1000 (3/0.125000/PHB) CPU/FFFFFFFFFFFFFFFF (2/0.125000/PHB) NET/0 (0/5000.000000/LOC) 
+ecetesla3:3048178:3074106 [0] NCCL INFO Pattern 4, crossNic 0, nChannels 1, bw 0.120000/0.120000, type LOC/PHB, sameChannels 1
+ecetesla3:3048178:3074106 [0] NCCL INFO  0 : NET/0 GPU/3 NET/0
+ecetesla3:3048178:3074106 [0] NCCL INFO Pattern 3, crossNic 0, nChannels 1, bw 0.240000/0.120000, type LOC/PHB, sameChannels 1
+ecetesla3:3048178:3074106 [0] NCCL INFO  0 : NET/0 GPU/3 NET/0
+ecetesla3:3048178:3074106 [0] NCCL INFO comm 0x785b100 rank 3 nRanks 5 nNodes 5 localRanks 1 localRank 0 MNNVL 0
+ecetesla0:2859680:2859715 [0] NCCL INFO comm 0x6cdf060 rank 0 nRanks 5 nNodes 5 localRanks 1 localRank 0 MNNVL 0
+ecetesla0:2859680:2859715 [0] NCCL INFO Tree 0 : -1 -> 0 -> 4/-1/-1
+ecetesla0:2859680:2859715 [0] NCCL INFO Tree 1 : 1 -> 0 -> 3/-1/-1
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 00/02 :    0   1   2   3   4
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 01/02 :    0   1   2   3   4
+ecetesla0:2859680:2859715 [0] NCCL INFO Ring 00 : 4 -> 0 -> 1
+ecetesla0:2859680:2859715 [0] NCCL INFO Ring 01 : 4 -> 0 -> 1
+ecetesla0:2859680:2859715 [0] NCCL INFO Trees [0] 4/-1/-1->0->-1 [1] 3/-1/-1->0->1
+ecetesla0:2859680:2859715 [0] NCCL INFO P2P Chunksize set to 131072
+ecetesla0:2859680:2859715 [0] NCCL INFO UDS: Creating service thread comm 0x6cdf060 rank 0
+ecetesla0:2859680:2859715 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla2:3156908:3170749 [0] NCCL INFO comm 0x8735d10 rank 2 nRanks 5 nNodes 5 localRanks 1 localRank 0 MNNVL 0
+eceTesla1:3164543:3164573 [0] NCCL INFO comm 0x838cd90 rank 1 nRanks 5 nNodes 5 localRanks 1 localRank 0 MNNVL 0
+eceTesla1:3164543:3164573 [0] NCCL INFO Tree 0 : 2 -> 1 -> -1/-1/-1
+eceTesla1:3164543:3164573 [0] NCCL INFO Tree 1 : -1 -> 1 -> 0/-1/-1
+eceTesla1:3164543:3164573 [0] NCCL INFO Ring 00 : 0 -> 1 -> 2
+eceTesla1:3164543:3164573 [0] NCCL INFO Ring 01 : 0 -> 1 -> 2
+eceTesla1:3164543:3164573 [0] NCCL INFO Trees [0] -1/-1/-1->1->2 [1] 0/-1/-1->1->-1
+eceTesla1:3164543:3164573 [0] NCCL INFO P2P Chunksize set to 131072
+ecetesla4:340464:340504 [0] NCCL INFO comm 0x801adf0 rank 4 nRanks 5 nNodes 5 localRanks 1 localRank 0 MNNVL 0
+ecetesla4:340464:340504 [0] NCCL INFO Tree 0 : 0 -> 4 -> 2/-1/-1
+ecetesla4:340464:340504 [0] NCCL INFO Tree 1 : 3 -> 4 -> -1/-1/-1
+ecetesla4:340464:340504 [0] NCCL INFO Ring 00 : 3 -> 4 -> 0
+ecetesla4:340464:340504 [0] NCCL INFO Ring 01 : 3 -> 4 -> 0
+ecetesla3:3048178:3074106 [0] NCCL INFO Tree 0 : 2 -> 3 -> -1/-1/-1
+ecetesla2:3156908:3170749 [0] NCCL INFO Tree 0 : 4 -> 2 -> 1/3/-1
+ecetesla2:3156908:3170749 [0] NCCL INFO Tree 1 : 3 -> 2 -> -1/-1/-1
+eceTesla1:3164543:3164573 [0] NCCL INFO UDS: Creating service thread comm 0x838cd90 rank 1
+ecetesla0:2859680:2859715 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7fdbf8e00000
+ecetesla0:2859680:2859715 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7fdbf9000000
+ecetesla0:2859680:2859715 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7fdbf9200000
+ecetesla0:2859680:2859715 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7fdbf9400000
+ecetesla4:340464:340504 [0] NCCL INFO Trees [0] 2/-1/-1->4->0 [1] -1/-1/-1->4->3
+ecetesla4:340464:340504 [0] NCCL INFO P2P Chunksize set to 131072
+ecetesla3:3048178:3074106 [0] NCCL INFO Tree 1 : 0 -> 3 -> 2/4/-1
+ecetesla3:3048178:3074106 [0] NCCL INFO Ring 00 : 2 -> 3 -> 4
+ecetesla3:3048178:3074106 [0] NCCL INFO Ring 01 : 2 -> 3 -> 4
+ecetesla3:3048178:3074106 [0] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] 2/4/-1->3->0
+ecetesla3:3048178:3074106 [0] NCCL INFO P2P Chunksize set to 131072
+ecetesla3:3048178:3074106 [0] NCCL INFO UDS: Creating service thread comm 0x785b100 rank 3
+ecetesla3:3048178:3074106 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla3:3048178:3074106 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7f390fc00000
+ecetesla3:3048178:3074106 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f390fc00c00
+ecetesla3:3048178:3074106 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7f390fc00e00
+ecetesla2:3156908:3170749 [0] NCCL INFO Ring 00 : 1 -> 2 -> 3
+ecetesla2:3156908:3170749 [0] NCCL INFO Ring 01 : 1 -> 2 -> 3
+ecetesla2:3156908:3170749 [0] NCCL INFO Trees [0] 1/3/-1->2->4 [1] -1/-1/-1->2->3
+ecetesla2:3156908:3170749 [0] NCCL INFO P2P Chunksize set to 131072
+eceTesla1:3164543:3164573 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla0:2859680:2859715 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7fdbf9600000
+ecetesla2:3156908:3170749 [0] NCCL INFO UDS: Creating service thread comm 0x8735d10 rank 2
+eceTesla1:3164543:3164573 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7f10b7400000
+ecetesla4:340464:340504 [0] NCCL INFO UDS: Creating service thread comm 0x801adf0 rank 4
+ecetesla3:3048178:3074106 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7f390fc01000
+ecetesla0:2859680:2859715 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7fdbf9800000
+ecetesla0:2859680:2859716 [0] NCCL INFO Mem Realloc old size 0, new size 8 pointer 0x7fdbec004f00
+ecetesla4:340464:340504 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla3:3048178:3074106 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f390fc01c00
+ecetesla3:3048178:3074106 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7f390fc01e00
+ecetesla2:3156908:3170749 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+eceTesla1:3164543:3164573 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f10b7400c00
+ecetesla4:340464:340504 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7f8ea1400000
+ecetesla3:3048178:3075299 [0] NCCL INFO Mem Realloc old size 0, new size 8 pointer 0x7f38fc004f00
+ecetesla2:3156908:3170749 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7fe1d3400000
+eceTesla1:3164543:3164573 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7f10b7400e00
+eceTesla1:3164543:3164573 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7f10b7401000
+eceTesla1:3164543:3164573 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f10b7401c00
+ecetesla4:340464:340504 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f8ea1400c00
+ecetesla2:3156908:3170749 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7fe1d3400c00
+eceTesla1:3164543:3164573 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7f10b7401e00
+ecetesla4:340464:340504 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7f8ea1400e00
+ecetesla2:3156908:3170749 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7fe1d3400e00
+ecetesla2:3156908:3170749 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7fe1d3401000
+eceTesla1:3164543:3164574 [0] NCCL INFO Mem Realloc old size 0, new size 8 pointer 0x7f10a8004f00
+ecetesla2:3156908:3170749 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7fe1d3401c00
+ecetesla4:340464:340504 [0] NCCL INFO channel.cc:40 Cuda Alloc Size 2880 pointer 0x7f8ea1401000
+ecetesla4:340464:340504 [0] NCCL INFO channel.cc:43 Cuda Alloc Size 56 pointer 0x7f8ea1401c00
+ecetesla4:340464:340504 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7f8ea1401e00
+ecetesla3:3048178:3075299 [0] NCCL INFO Allocated 5767524 bytes of shared memory in /dev/shm/nccl-J2Bqw5
+ecetesla2:3156908:3170749 [0] NCCL INFO channel.cc:54 Cuda Alloc Size 20 pointer 0x7fe1d3401e00
+eceTesla1:3164543:3164574 [0] NCCL INFO Allocated 5767524 bytes of shared memory in /dev/shm/nccl-Rn5dO6
+ecetesla4:340464:340505 [0] NCCL INFO Mem Realloc old size 0, new size 8 pointer 0x7f8e98004f00
+ecetesla2:3156908:3171439 [0] NCCL INFO Mem Realloc old size 0, new size 8 pointer 0x7fe1cc004f00
+ecetesla4:340464:340505 [0] NCCL INFO Allocated 5767524 bytes of shared memory in /dev/shm/nccl-CYtEGu
+ecetesla2:3156908:3171439 [0] NCCL INFO Allocated 5767524 bytes of shared memory in /dev/shm/nccl-UzWnlN
+ecetesla4:340464:340505 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e98004ec0 op.respSize=16 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e98004f20
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e98008df0 op.respSize=128 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Channel 00/0 : 3[0] -> 4[0] [receive] via NET/Socket/0
+ecetesla4:340464:340505 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e9800e250 op.respSize=16 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e98004f98
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e9800e290 op.respSize=128 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Channel 01/0 : 3[0] -> 4[0] [receive] via NET/Socket/0
+ecetesla4:340464:340505 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e980136f0 op.respSize=16 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e98005010
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e98013730 op.respSize=0 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla4:340464:340504 [0] NCCL INFO Channel 00/0 : 4[0] -> 0[0] [send] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO Allocated 5767524 bytes of shared memory in /dev/shm/nccl-SndQdM
+ecetesla4:340464:340505 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e98018a50 op.respSize=16 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc004ec0 op.respSize=16 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc004ec0 op.respSize=16 done
+eceTesla1:3164543:3164574 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=1 op.reqBuff=0x7f10a8004ec0 op.respSize=16 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f10a8004f20
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc004f20
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=3 op.reqBuff=0x7f10a8008df0 op.respSize=128 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e98005088
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e98018a90 op.respSize=0 done
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc004f20
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Setup res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Channel 01/0 : 4[0] -> 0[0] [send] via NET/Socket/0
+eceTesla1:3164543:3164574 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=1 op.reqBuff=0x7f10a800e250 op.respSize=16 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f10a8004f98
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=3 op.reqBuff=0x7f10a800e290 op.respSize=128 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Setup res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/Socket/0
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc008df0 op.respSize=128 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 00/0 : 1[0] -> 2[0] [receive] via NET/Socket/0
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc00e250 op.respSize=16 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc004f98
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc00e290 op.respSize=128 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 01/0 : 1[0] -> 2[0] [receive] via NET/Socket/0
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc0136f0 op.respSize=16 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc005010
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc013730 op.respSize=0 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 00/0 : 2[0] -> 3[0] [send] via NET/Socket/0
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc018a50 op.respSize=16 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc005088
+eceTesla1:3164543:3164574 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=1 op.reqBuff=0x7f10a80136f0 op.respSize=16 done
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc018a90 op.respSize=0 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f10a8005010
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 01/0 : 2[0] -> 3[0] [send] via NET/Socket/0
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=3 op.reqBuff=0x7f10a8013730 op.respSize=0 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Setup res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO Channel 00/0 : 1[0] -> 2[0] [send] via NET/Socket/0
+eceTesla1:3164543:3164574 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=1 op.reqBuff=0x7f10a8018a50 op.respSize=16 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f10a8005088
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=3 op.reqBuff=0x7f10a8018a90 op.respSize=0 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Channel 01/0 : 1[0] -> 2[0] [send] via NET/Socket/0
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc008df0 op.respSize=128 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 00/0 : 2[0] -> 3[0] [receive] via NET/Socket/0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc00e250 op.respSize=16 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc004f98
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc00e290 op.respSize=128 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 01/0 : 2[0] -> 3[0] [receive] via NET/Socket/0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc0136f0 op.respSize=16 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc005010
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc013730 op.respSize=0 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 00/0 : 3[0] -> 4[0] [send] via NET/Socket/0
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fe1db5326b8
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fe1db5321f8 &recv->proxyConn=0x7fe1db532200 connectInfo=0x7fe1db547130
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc018a50 op.respSize=16 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc005088
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc018a90 op.respSize=0 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 01/0 : 3[0] -> 4[0] [send] via NET/Socket/0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fe1db544ff8
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fe1db544b38 &recv->proxyConn=0x7fe1db544b40 connectInfo=0x7fe1db5471b0
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f390a5b5d10
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f390a5b5850 &recv->proxyConn=0x7f390a5b5858 connectInfo=0x7f390a5ca4a0
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f390a5c8650
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f390a5c8190 &recv->proxyConn=0x7f390a5c8198 connectInfo=0x7f390a5ca520
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy recv connection 0 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec004ec0 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec004f20
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec008df0 op.respSize=128 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 00/0 : 4[0] -> 0[0] [receive] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy recv connection 1 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec00e250 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec004f98
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f3916200000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b5d10 op.type=4 op.reqBuff=0x7f38fc01ddb0 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b5d10
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec00e290 op.respSize=128 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b5d10 matches expected opId=0x7f390a5b5d10
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f390a5b5d10
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 01/0 : 4[0] -> 0[0] [receive] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy send connection 2 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec0136f0 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec005010
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec013730 op.respSize=0 done
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy send connection 3 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec018a50 op.respSize=16 done
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fe1d3600000
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec005088
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db5326b8 op.type=4 op.reqBuff=0x7fe1cc01ddb0 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db5326b8
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO Queuing opId=0x7fe1db5326b8 respBuff=0x7fe1db572430 respSize=21040
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec018a90 op.respSize=0 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fe1db5326b8
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fe1db5326b8
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/Socket/0
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f8eab531df0
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f8eab5328f8 &recv->proxyConn=0x7f8eab532900 connectInfo=0x7f8eab5471e0
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fdbf25b5148
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fdbf25b5c50 &recv->proxyConn=0x7fdbf25b5c58 connectInfo=0x7fdbf25cfee0
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f8eab544730
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fdbf25ca428
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fdbf25caf30 &recv->proxyConn=0x7fdbf25caf38 connectInfo=0x7fdbf25cff60
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f8eab545238 &recv->proxyConn=0x7f8eab545240 connectInfo=0x7f8eab547260
+eceTesla1:3164543:3164573 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f10bf532390
+eceTesla1:3164543:3164573 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f10bf531ed0 &recv->proxyConn=0x7f10bf531ed8 connectInfo=0x7f10bf547130
+eceTesla1:3164543:3164573 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f10bf544cd0
+eceTesla1:3164543:3164573 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f10bf544810 &recv->proxyConn=0x7f10bf544818 connectInfo=0x7f10bf5471b0
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f3916c00000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b5850 op.type=4 op.reqBuff=0x7f38fc01de40 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b5850
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b5850 matches expected opId=0x7f390a5b5850
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f390a5b5850
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fe1c2000000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db544ff8 op.type=4 op.reqBuff=0x7fe1cc01df00 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db544ff8
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO Queuing opId=0x7fe1db544ff8 respBuff=0x7fe1db54e3e0 respSize=21040
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fe1db544ff8
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fe1db544ff8
+eceTesla1:3164543:3164574 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f10b7600000
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf532390 op.type=4 op.reqBuff=0x7f10a801ddb0 op.respSize=21040 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf532390
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Connect res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO Queuing opId=0x7f10bf532390 respBuff=0x7f10bf572430 respSize=21040
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f8ea1600000
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f10bf532390
+eceTesla1:3164543:3164573 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f10bf532390
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab531df0 op.type=4 op.reqBuff=0x7f8e9801ddb0 op.respSize=21040 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab531df0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab531df0 matches expected opId=0x7f8eab531df0
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f8eab531df0
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fdbfb000000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b5148 op.type=4 op.reqBuff=0x7fdbec01ddb0 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b5148
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO Queuing opId=0x7fdbf25b5148 respBuff=0x7fdbf25fb270 respSize=21040
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fdbf25b5148
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fdbf25b5148
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f3917600000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5c8650 op.type=4 op.reqBuff=0x7f38fc01eda0 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5c8650
+ecetesla3:3048178:3074106 [0] NCCL INFO Queuing opId=0x7f390a5c8650 respBuff=0x7f390a5d1780 respSize=21040
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fe1c2a00000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db5321f8 op.type=4 op.reqBuff=0x7fe1cc01de40 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f390a5c8650
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f390a5c8650
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db5321f8
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db5321f8 matches expected opId=0x7fe1db5321f8
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fe1db5321f8
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+eceTesla1:3164543:3164574 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f10ae000000
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f8e9e000000
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf531ed0 op.type=4 op.reqBuff=0x7f10a801de40 op.respSize=21040 done
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab5328f8 op.type=4 op.reqBuff=0x7f8e9801de40 op.respSize=21040 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab5328f8
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO Queuing opId=0x7f8eab5328f8 respBuff=0x7f8eab54e490 respSize=21040
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf531ed0
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f8eab5328f8
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f8eab5328f8
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf531ed0 matches expected opId=0x7f10bf531ed0
+eceTesla1:3164543:3164573 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f10bf531ed0
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fdbff600000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b5c50 op.type=4 op.reqBuff=0x7fdbec01de40 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b5c50
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO Queuing opId=0x7fdbf25b5c50 respBuff=0x7fdbf25d7220 respSize=21040
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fdbf25b5c50
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fdbf25b5c50
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f38f2000000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5c8190 op.type=4 op.reqBuff=0x7f38fc01fc50 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5c8190
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5c8190 matches expected opId=0x7f390a5c8190
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f390a5c8190
+eceTesla1:3164543:3164574 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f10aea00000
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf544cd0 op.type=4 op.reqBuff=0x7f10a801f010 op.respSize=21040 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf544cd0
+eceTesla1:3164543:3164573 [0] NCCL INFO Queuing opId=0x7f10bf544cd0 respBuff=0x7f10bf54e3e0 respSize=21040
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Connect res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f10bf544cd0
+eceTesla1:3164543:3164573 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f10bf544cd0
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fe1c3400000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db544b38 op.type=4 op.reqBuff=0x7fe1cc01de40 op.respSize=21040 done
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f8e9ea00000
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab544730 op.type=4 op.reqBuff=0x7f8e9801ef70 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db544b38
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db544b38 matches expected opId=0x7fe1db544b38
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fe1db544b38
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab544730
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab544730 matches expected opId=0x7f8eab544730
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f8eab544730
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fdbde000000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25ca428 op.type=4 op.reqBuff=0x7fdbec01ed00 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25ca428
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25ca428 matches expected opId=0x7fdbf25ca428
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fdbf25ca428
+eceTesla1:3164543:3164574 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f10af400000
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf544810 op.type=4 op.reqBuff=0x7f10a801ff60 op.respSize=21040 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf544810
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f8e9f400000
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab545238 op.type=4 op.reqBuff=0x7f8e9801fec0 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected all rings
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Connect res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf544810 matches expected opId=0x7f10bf544810
+eceTesla1:3164543:3164573 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f10bf544810
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab545238
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab545238 matches expected opId=0x7f8eab545238
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f8eab545238
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy send connection 4 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc01de40 op.respSize=16 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc005100
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc020ee0 op.respSize=0 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 00/0 : 2[0] -> 4[0] [send] via NET/Socket/0
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected all rings
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy send connection 4 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc01fc50 op.respSize=16 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc005100
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc020e40 op.respSize=0 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 01/0 : 3[0] -> 0[0] [send] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fdbdea00000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25caf30 op.type=4 op.reqBuff=0x7fdbec01fec0 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25caf30
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25caf30 matches expected opId=0x7fdbf25caf30
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fdbf25caf30
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected all rings
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected all rings
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy recv connection 4 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec01fec0 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec005100
+eceTesla1:3164543:3164574 [0] NCCL INFO New proxy recv connection 4 from local rank 0, transport 2
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=1 op.reqBuff=0x7f10a801ff60 op.respSize=16 done
+ecetesla4:340464:340504 [0] NCCL INFO Connected all rings
+ecetesla4:340464:340505 [0] NCCL INFO New proxy recv connection 4 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e9801fec0 op.respSize=16 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f10a8005100
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=3 op.reqBuff=0x7f10a8020ee0 op.respSize=128 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec020e40 op.respSize=128 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e98005100
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Setup res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Channel 00/0 : 2[0] -> 1[0] [receive] via NET/Socket/0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 01/0 : 3[0] -> 0[0] [receive] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy send connection 5 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec020e20 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec005178
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec020f90 op.respSize=0 done
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e98020e40 op.respSize=128 done
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy recv connection 5 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc020ec0 op.respSize=16 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO New proxy send connection 5 from local rank 0, transport 2
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=1 op.reqBuff=0x7f10a8020ec0 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 01/0 : 0[0] -> 3[0] [send] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Channel 00/0 : 2[0] -> 4[0] [receive] via NET/Socket/0
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc005178
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f10a8005178
+ecetesla4:340464:340505 [0] NCCL INFO New proxy send connection 5 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e98020e20 op.respSize=16 done
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc020f10 op.respSize=128 done
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=3 op.reqBuff=0x7f10a8021030 op.respSize=0 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 00/0 : 4[0] -> 2[0] [receive] via NET/Socket/0
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e98005178
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy recv connection 6 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc01de40 op.respSize=16 done
+eceTesla1:3164543:3164573 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/Socket/0
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e98020f90 op.respSize=0 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy recv connection 5 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc020e20 op.respSize=16 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc0051f0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc005178
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc021060 op.respSize=128 done
+ecetesla4:340464:340504 [0] NCCL INFO Channel 00/0 : 4[0] -> 2[0] [send] via NET/Socket/0
+ecetesla4:340464:340505 [0] NCCL INFO New proxy recv connection 6 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e9801fec0 op.respSize=16 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 00/0 : 3[0] -> 2[0] [receive] via NET/Socket/0
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy recv connection 7 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc020ec0 op.respSize=16 done
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e980051f0
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e98020fc0 op.respSize=128 done
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc005268
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc021090 op.respSize=128 done
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Channel 00/0 : 0[0] -> 4[0] [receive] via NET/Socket/0
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc020e70 op.respSize=128 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 01/0 : 3[0] -> 2[0] [receive] via NET/Socket/0
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy recv connection 6 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec01fec0 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec0051f0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 01/0 : 0[0] -> 3[0] [receive] via NET/Socket/0
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy send connection 8 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc01de40 op.respSize=16 done
+ecetesla4:340464:340505 [0] NCCL INFO New proxy send connection 7 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e98020e20 op.respSize=16 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec020fc0 op.respSize=128 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/Socket/0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e98005268
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc0052e0
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy send connection 7 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec020e20 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=3 op.reqBuff=0x7f8e98020ff0 op.respSize=0 done
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=3 op.reqBuff=0x7fe1cc021090 op.respSize=0 done
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec005268
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=3 op.reqBuff=0x7fdbec020ff0 op.respSize=0 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Channel 01/0 : 4[0] -> 3[0] [send] via NET/Socket/0
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Channel 00/0 : 2[0] -> 1[0] [send] via NET/Socket/0
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO Channel 00/0 : 0[0] -> 4[0] [send] via NET/Socket/0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy recv connection 6 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc01fc50 op.respSize=16 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc0051f0
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc020fc0 op.respSize=128 done
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fdbf25cac08 &recv->proxyConn=0x7fdbf25cac10 connectInfo=0x7fdbf25e16d0
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fdbf25caa78
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+eceTesla1:3164543:3164573 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f10bf532520 &recv->proxyConn=0x7f10bf532528 connectInfo=0x7f10bf54e3e0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fdbf25b5ac0
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fdbf25ca5b8 &recv->proxyConn=0x7fdbf25ca5c0 connectInfo=0x7fdbf25ebb80
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 01/0 : 4[0] -> 3[0] [receive] via NET/Socket/0
+eceTesla1:3164543:3164573 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f10bf544680
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy send connection 7 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc020e20 op.respSize=16 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc005268
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc020ff0 op.respSize=0 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 00/0 : 3[0] -> 2[0] [send] via NET/Socket/0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy send connection 8 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc01fc50 op.respSize=16 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc0052e0
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=3 op.reqBuff=0x7f38fc020ff0 op.respSize=0 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Setup res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO Channel 01/0 : 3[0] -> 2[0] [send] via NET/Socket/0
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f8eab5325d0 &recv->proxyConn=0x7f8eab5325d8 connectInfo=0x7f8eab558940
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f8eab532440
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f8eab531f80 &recv->proxyConn=0x7f8eab531f88 connectInfo=0x7f8eab562df0
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f8eab5450a8
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fe1db5329e0
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fe1db532b70 &recv->proxyConn=0x7fe1db532b78 connectInfo=0x7fe1db564d50
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7fe1db532068
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fe1db532848 &recv->proxyConn=0x7fe1db532850 connectInfo=0x7fe1db558890
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f390a5c79b0
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f390a5c7b40 &recv->proxyConn=0x7f390a5c7b48 connectInfo=0x7f390a5d3790
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f390a5b56c0
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclProxyCallAsync opId=0x7f390a5c8000
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7f390a5c87e0 &recv->proxyConn=0x7f390a5c87e8 connectInfo=0x7f390a5e60e0
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclProxyCallAsync opId=0x7fe1db545188 &recv->proxyConn=0x7fe1db545190 connectInfo=0x7fe1db558910
+eceTesla1:3164543:3164574 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f10a6000000
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf544680 op.type=4 op.reqBuff=0x7f10a8021100 op.respSize=21040 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf544680
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Connect res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO Queuing opId=0x7f10bf544680 respBuff=0x7f10bf54e3e0 respSize=21040
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f10bf544680
+eceTesla1:3164543:3164573 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f10bf544680
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fdbdf400000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25caa78 op.type=4 op.reqBuff=0x7fdbec021150 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25caa78
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO Queuing opId=0x7fdbf25caa78 respBuff=0x7fdbf25ebb80 respSize=21040
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fdbf25caa78
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fdbf25caa78
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f8e8e000000
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab532440 op.type=4 op.reqBuff=0x7f8e98021150 op.respSize=21040 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab532440
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO Queuing opId=0x7f8eab532440 respBuff=0x7f8eab562df0 respSize=21040
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f8eab532440
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f8eab532440
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fe1c0000000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db5329e0 op.type=4 op.reqBuff=0x7fe1cc0211b0 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db5329e0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db5329e0 matches expected opId=0x7fe1db5329e0
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fe1db5329e0
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fdbd6000000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25cac08 op.type=4 op.reqBuff=0x7fdbec01fec0 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25cac08
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25cac08 matches expected opId=0x7fdbf25cac08
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fdbf25cac08
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f38f2a00000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5c79b0 op.type=4 op.reqBuff=0x7f38fc021110 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5c79b0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO Queuing opId=0x7f390a5c79b0 respBuff=0x7f390a5e60e0 respSize=21040
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f390a5c79b0
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f390a5c79b0
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f38f3400000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5c7b40 op.type=4 op.reqBuff=0x7f38fc021110 op.respSize=21040 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5c7b40
+ecetesla3:3048178:3074106 [0] NCCL INFO Queuing opId=0x7f390a5c7b40 respBuff=0x7f390a5e60e0 respSize=21040
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f390a5c7b40
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f390a5c7b40
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fe1c0a00000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db532b70 op.type=4 op.reqBuff=0x7fe1cc0211b0 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db532b70
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO Queuing opId=0x7fe1db532b70 respBuff=0x7fe1db558890 respSize=21040
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fe1db532b70
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fe1db532b70
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f8e8ea00000
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab5325d0 op.type=4 op.reqBuff=0x7f8e9801fec0 op.respSize=21040 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab5325d0
+ecetesla4:340464:340504 [0] NCCL INFO Queuing opId=0x7f8eab5325d0 respBuff=0x7f8eab562df0 respSize=21040
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f8eab5325d0
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f8eab5325d0
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fdbd6a00000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b5ac0 op.type=4 op.reqBuff=0x7fdbec022ff0 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b5ac0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO Queuing opId=0x7fdbf25b5ac0 respBuff=0x7fdbf25ebb80 respSize=21040
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fdbf25b5ac0
+ecetesla0:2859680:2859715 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fdbf25b5ac0
+eceTesla1:3164543:3164574 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f10a6a00000
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf532520 op.type=4 op.reqBuff=0x7f10a801ff60 op.respSize=21040 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf532520
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf532520 matches expected opId=0x7f10bf532520
+eceTesla1:3164543:3164573 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f10bf532520
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f8e8f400000
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab531f80 op.type=4 op.reqBuff=0x7f8e9801fec0 op.respSize=21040 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab531f80
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab531f80 matches expected opId=0x7f8eab531f80
+ecetesla4:340464:340504 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f8eab531f80
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7fe1c1400000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db532068 op.type=4 op.reqBuff=0x7fe1cc035be0 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db532068
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO Queuing opId=0x7fe1db532068 respBuff=0x7fe1db56d1f0 respSize=21040
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fe1db532068
+ecetesla2:3156908:3170749 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7fe1db532068
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f38f0000000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b56c0 op.type=4 op.reqBuff=0x7f38fc022e00 op.respSize=21040 done
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b56c0
+ecetesla3:3048178:3074106 [0] NCCL INFO Queuing opId=0x7f390a5b56c0 respBuff=0x7f390a5f0590 respSize=21040
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7f390a5b56c0
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f390a5b56c0
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f8e8c000000
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab5450a8 op.type=4 op.reqBuff=0x7f8e98021050 op.respSize=21040 done
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab5450a8
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab5450a8 matches expected opId=0x7f8eab5450a8
+ecetesla4:340464:340504 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f8eab5450a8
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fe1be000000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db532848 op.type=4 op.reqBuff=0x7fe1cc035be0 op.respSize=21040 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db532848
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO Queuing opId=0x7fe1db532848 respBuff=0x7fe1db558890 respSize=21040
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Dequeued cached opId=0x7fe1db532848
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fe1db532848
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:741 Cuda Host Alloc Size 9641984 pointer 0x7f38f0a00000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5c8000 op.type=4 op.reqBuff=0x7f38fc022e00 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5c8000
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5c8000 matches expected opId=0x7f390a5c8000
+ecetesla3:3048178:3074106 [0] NCCL INFO sendConnect ncclPollProxyResponse opId=0x7f390a5c8000
+ecetesla0:2859680:2859716 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fdbd7400000
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25ca5b8 op.type=4 op.reqBuff=0x7fdbec021050 op.respSize=21040 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25ca5b8
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25ca5b8 matches expected opId=0x7fdbf25ca5b8
+ecetesla0:2859680:2859715 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fdbf25ca5b8
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7fe1bea00000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db545188 op.type=4 op.reqBuff=0x7fe1cc035be0 op.respSize=21040 done
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db545188
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db545188 matches expected opId=0x7fe1db545188
+ecetesla2:3156908:3170749 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7fe1db545188
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:890 Cuda Host Alloc Size 9641984 pointer 0x7f38f1400000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5c87e0 op.type=4 op.reqBuff=0x7f38fc022e00 op.respSize=21040 done
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5c87e0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Connect res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5c87e0 matches expected opId=0x7f390a5c87e0
+ecetesla3:3048178:3074106 [0] NCCL INFO recvConnect ncclPollProxyResponse opId=0x7f390a5c87e0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected all trees
+ecetesla0:2859680:2859715 [0] NCCL INFO NCCL_PROTO set by environment to simple
+ecetesla0:2859680:2859715 [0] NCCL INFO   Algorithm   |                            Tree                  |                            Ring                  |                   CollNetDirect                  |
+ecetesla0:2859680:2859715 [0] NCCL INFO   Protocol    |             LL |          LL128 |         Simple |             LL |          LL128 |         Simple |             LL |          LL128 |         Simple |
+ecetesla0:2859680:2859715 [0] NCCL INFO  Max NThreads |            512 |            640 |            512 |            512 |            640 |            256 |              0 |              0 |            640 |
+ecetesla0:2859680:2859715 [0] NCCL INFO     Broadcast |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     9.3/   0.0 |    18.0/   0.0 |    22.4/   0.1 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO        Reduce |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     9.3/   0.0 |    18.0/   0.0 |    22.4/   0.1 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO     AllGather |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |    17.4/   0.0 |    30.0/   0.0 |    64.4/   0.1 |     0.0/   0.0 |     0.0/   0.0 |    31.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO ReduceScatter |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |    17.4/   0.0 |    30.0/   0.0 |    64.4/   0.1 |     0.0/   0.0 |     0.0/   0.0 |    31.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO     AllReduce |    26.8/   0.0 |    48.0/   0.0 |   112.0/   0.0 |    31.6/   0.0 |    49.0/   0.0 |   137.0/   0.1 |     0.0/   0.0 |     0.0/   0.0 |    31.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO   Algorithm   |                    CollNetChain                  |                            NVLS                  |                        NVLSTree                  |
+ecetesla0:2859680:2859715 [0] NCCL INFO   Protocol    |             LL |          LL128 |         Simple |             LL |          LL128 |         Simple |             LL |          LL128 |         Simple |
+ecetesla0:2859680:2859715 [0] NCCL INFO  Max NThreads |              0 |              0 |            640 |              0 |              0 |            640 |              0 |              0 |            640 |
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected all trees
+eceTesla1:3164543:3164573 [0] NCCL INFO NCCL_PROTO set by environment to simple
+eceTesla1:3164543:3164573 [0] NCCL INFO threadThresholds 8/8/64 | 40/8/64 | 512 | 512
+eceTesla1:3164543:3164573 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+ecetesla0:2859680:2859715 [0] NCCL INFO     Broadcast |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO        Reduce |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO     AllGather |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |    18.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO ReduceScatter |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |    18.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |
+eceTesla1:3164543:3164574 [0] NCCL INFO New proxy send connection 6 from local rank 0, transport 2
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=1 op.reqBuff=0x7f10a801ff60 op.respSize=16 done
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+ecetesla0:2859680:2859715 [0] NCCL INFO     AllReduce |     0.0/   0.0 |     0.0/   0.0 |    30.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |    18.0/   0.0 |     0.0/   0.0 |     0.0/   0.0 |    56.0/   0.0 |
+ecetesla0:2859680:2859715 [0] NCCL INFO threadThresholds 8/8/64 | 40/8/64 | 512 | 512
+ecetesla0:2859680:2859715 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+ecetesla0:2859680:2859716 [0] NCCL INFO New proxy send connection 8 from local rank 0, transport 2
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=1 op.reqBuff=0x7fdbec023050 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859715 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fdbec0052e0
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected all trees
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected all trees
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=Init res=0
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+ecetesla4:340464:340504 [0] NCCL INFO Connected all trees
+ecetesla4:340464:340504 [0] NCCL INFO NCCL_PROTO set by environment to simple
+ecetesla4:340464:340504 [0] NCCL INFO threadThresholds 8/8/64 | 40/8/64 | 512 | 512
+ecetesla4:340464:340504 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+ecetesla0:2859680:2859716 [0] NCCL INFO Allocated shareable buffer 0x7fdbf9a00000 size 4194304 ipcDesc 0x7fdbec05f668
+ecetesla0:2859680:2859716 [0] NCCL INFO proxyProgressAsync opId=0x7fdbf25b1fc0 op.type=2 op.reqBuff=0x7fdbec05f610 op.respSize=0 done
+ecetesla0:2859680:2859715 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fdbf25b1fc0
+ecetesla0:2859680:2859716 [0] NCCL INFO Received and initiated operation=SharedInit res=0
+ecetesla0:2859680:2859715 [0] NCCL INFO resp.opId=0x7fdbf25b1fc0 matches expected opId=0x7fdbf25b1fc0
+ecetesla3:3048178:3074106 [0] NCCL INFO NCCL_PROTO set by environment to simple
+ecetesla3:3048178:3074106 [0] NCCL INFO threadThresholds 8/8/64 | 40/8/64 | 512 | 512
+ecetesla3:3048178:3074106 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+ecetesla2:3156908:3170749 [0] NCCL INFO NCCL_PROTO set by environment to simple
+ecetesla2:3156908:3170749 [0] NCCL INFO threadThresholds 8/8/64 | 40/8/64 | 512 | 512
+ecetesla2:3156908:3170749 [0] NCCL INFO 2 coll channels, 0 collnet channels, 0 nvls channels, 2 p2p channels, 1 p2p channels per peer
+eceTesla1:3164543:3164573 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f10a80051f0
+ecetesla4:340464:340505 [0] NCCL INFO New proxy send connection 8 from local rank 0, transport 2
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=1 op.reqBuff=0x7f8e98020f60 op.respSize=16 done
+ecetesla0:2859680:2859715 [0] NCCL INFO init.cc:401 Cuda Alloc Size 8784 pointer 0x7fdbd7e00000
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO New proxy send connection 9 from local rank 0, transport 2
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=1 op.reqBuff=0x7f38fc022e00 op.respSize=16 done
+ecetesla2:3156908:3171439 [0] NCCL INFO New proxy send connection 9 from local rank 0, transport 2
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=1 op.reqBuff=0x7fe1cc035be0 op.respSize=16 done
+eceTesla1:3164543:3164574 [0] NCCL INFO transport/net.cc:506 Cuda Alloc Size 4194304 pointer 0x7f10a7400000
+eceTesla1:3164543:3164574 [0] NCCL INFO proxyProgressAsync opId=0x7f10bf52ef10 op.type=2 op.reqBuff=0x7f10a8023030 op.respSize=0 done
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f10bf52ef10
+eceTesla1:3164543:3164573 [0] NCCL INFO resp.opId=0x7f10bf52ef10 matches expected opId=0x7f10bf52ef10
+eceTesla1:3164543:3164574 [0] NCCL INFO Received and initiated operation=SharedInit res=0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f8e980052e0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=Init res=0
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7fe1cc005358
+eceTesla1:3164543:3164573 [0] NCCL INFO init.cc:401 Cuda Alloc Size 8784 pointer 0x7f10b7402000
+ecetesla4:340464:340505 [0] NCCL INFO transport/net.cc:506 Cuda Alloc Size 4194304 pointer 0x7f8e8ca00000
+ecetesla4:340464:340505 [0] NCCL INFO proxyProgressAsync opId=0x7f8eab52efc0 op.type=2 op.reqBuff=0x7f8e98021050 op.respSize=0 done
+ecetesla3:3048178:3074106 [0] NCCL INFO Connected to proxy localRank 0 -> connection 0x7f38fc005358
+ecetesla4:340464:340504 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f8eab52efc0
+ecetesla4:340464:340504 [0] NCCL INFO resp.opId=0x7f8eab52efc0 matches expected opId=0x7f8eab52efc0
+ecetesla4:340464:340505 [0] NCCL INFO Received and initiated operation=SharedInit res=0
+ecetesla3:3048178:3075299 [0] NCCL INFO transport/net.cc:506 Cuda Alloc Size 4194304 pointer 0x7f38ee000000
+ecetesla3:3048178:3075299 [0] NCCL INFO proxyProgressAsync opId=0x7f390a5b1fb0 op.type=2 op.reqBuff=0x7f38fc02a420 op.respSize=0 done
+ecetesla2:3156908:3171439 [0] NCCL INFO transport/net.cc:506 Cuda Alloc Size 4194304 pointer 0x7fe1bf400000
+ecetesla2:3156908:3171439 [0] NCCL INFO proxyProgressAsync opId=0x7fe1db52ef10 op.type=2 op.reqBuff=0x7fe1cc0389e0 op.respSize=0 done
+ecetesla4:340464:340504 [0] NCCL INFO init.cc:401 Cuda Alloc Size 8784 pointer 0x7f8ea1402000
+ecetesla3:3048178:3075299 [0] NCCL INFO Received and initiated operation=SharedInit res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7f390a5b1fb0
+ecetesla3:3048178:3074106 [0] NCCL INFO resp.opId=0x7f390a5b1fb0 matches expected opId=0x7f390a5b1fb0
+ecetesla2:3156908:3170749 [0] NCCL INFO ncclPollProxyResponse Received new opId=0x7fe1db52ef10
+ecetesla2:3156908:3170749 [0] NCCL INFO resp.opId=0x7fe1db52ef10 matches expected opId=0x7fe1db52ef10
+ecetesla2:3156908:3171439 [0] NCCL INFO Received and initiated operation=SharedInit res=0
+ecetesla3:3048178:3074106 [0] NCCL INFO init.cc:401 Cuda Alloc Size 8784 pointer 0x7f390fc02000
+ecetesla2:3156908:3170749 [0] NCCL INFO init.cc:401 Cuda Alloc Size 8784 pointer 0x7fe1d3402000
+ecetesla3:3048178:3074106 [0] NCCL INFO init.cc:429 Cuda Host Alloc Size 33554432 pointer 0x7f38ec000000
+ecetesla3:3048178:3074106 [0] NCCL INFO init.cc:435 Cuda Host Alloc Size 128 pointer 0x7f390f800400
+ecetesla3:3048178:3074106 [0] NCCL INFO comm 0x785b100 rank 3 nranks 5 cudaDev 0 nvmlDev 0 busId 1000 commId 0x191d1e1b003301fe - Init COMPLETE
+eceTesla1:3164543:3164573 [0] NCCL INFO init.cc:429 Cuda Host Alloc Size 33554432 pointer 0x7f109e000000
+eceTesla1:3164543:3164573 [0] NCCL INFO init.cc:435 Cuda Host Alloc Size 128 pointer 0x7f10cae00400
+eceTesla1:3164543:3164573 [0] NCCL INFO comm 0x838cd90 rank 1 nranks 5 cudaDev 0 nvmlDev 0 busId a000 commId 0x191d1e1b003301fe - Init COMPLETE
+ecetesla4:340464:340504 [0] NCCL INFO init.cc:429 Cuda Host Alloc Size 33554432 pointer 0x7f8e8a000000
+ecetesla4:340464:340504 [0] NCCL INFO init.cc:435 Cuda Host Alloc Size 128 pointer 0x7f8eb4e00400
+ecetesla4:340464:340504 [0] NCCL INFO comm 0x801adf0 rank 4 nranks 5 cudaDev 0 nvmlDev 0 busId a000 commId 0x191d1e1b003301fe - Init COMPLETE
+ecetesla0:2859680:2859715 [0] NCCL INFO init.cc:429 Cuda Host Alloc Size 33554432 pointer 0x7fdbd4000000
+ecetesla0:2859680:2859715 [0] NCCL INFO init.cc:435 Cuda Host Alloc Size 128 pointer 0x7fdbf8a00400
+ecetesla0:2859680:2859715 [0] NCCL INFO comm 0x6cdf060 rank 0 nranks 5 cudaDev 0 nvmlDev 0 busId 17000 commId 0x191d1e1b003301fe - Init COMPLETE
+ecetesla3:3048178:3048178 [0] NCCL INFO AllReduce: opCount 0 sendbuff 0x7f390f600000 recvbuff 0x7f390f600000 count 1 datatype 7 op 0 root 0 comm 0x785b100 [nranks=5] stream 0x4db2d90
+ecetesla3:3048178:3048178 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla4:340464:340464 [0] NCCL INFO AllReduce: opCount 0 sendbuff 0x7f8eb4c00000 recvbuff 0x7f8eb4c00000 count 1 datatype 7 op 0 root 0 comm 0x801adf0 [nranks=5] stream 0x801aca0
+ecetesla4:340464:340464 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+eceTesla1:3164543:3164543 [0] NCCL INFO AllReduce: opCount 0 sendbuff 0x7f10cac00000 recvbuff 0x7f10cac00000 count 1 datatype 7 op 0 root 0 comm 0x838cd90 [nranks=5] stream 0x838cc40
+eceTesla1:3164543:3164543 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla2:3156908:3170749 [0] NCCL INFO init.cc:429 Cuda Host Alloc Size 33554432 pointer 0x7fe1bc000000
+ecetesla2:3156908:3170749 [0] NCCL INFO init.cc:435 Cuda Host Alloc Size 128 pointer 0x7fe1e6e00400
+ecetesla2:3156908:3170749 [0] NCCL INFO comm 0x8735d10 rank 2 nranks 5 cudaDev 0 nvmlDev 0 busId a000 commId 0x191d1e1b003301fe - Init COMPLETE
+ecetesla2:3156908:3156908 [0] NCCL INFO AllReduce: opCount 0 sendbuff 0x7fe1e6c00000 recvbuff 0x7fe1e6c00000 count 1 datatype 7 op 0 root 0 comm 0x8735d10 [nranks=5] stream 0x8735c50
+ecetesla2:3156908:3156908 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla0:2859680:2859680 [0] NCCL INFO AllReduce: opCount 0 sendbuff 0x7fdbf8800000 recvbuff 0x7fdbf8800000 count 1 datatype 7 op 0 root 0 comm 0x6cdf060 [nranks=5] stream 0x3fcdec0
+ecetesla0:2859680:2859680 [0] NCCL INFO misc/utils.cc:235 memory stack hunk malloc(65536)
+ecetesla0:2859680:2859680 [0] NCCL INFO 4 Bytes -> Algo 0 proto 2 time 112.094727
+[AFTER ALL REDUCE] Rank 0 using GPU 0 has data 5.0
+[AFTER ALL REDUCE] Rank 4 using GPU 0 has data 5.0
+[AFTER ALL REDUCE] Rank 2 using GPU 0 has data 5.0
+[AFTER ALL REDUCE] Rank 1 using GPU 0 has data 5.0
+[AFTER ALL REDUCE] Rank 3 using GPU 0 has data 5.0
+ecetesla4:340464:340505 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+eceTesla1:3164543:3164574 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ecetesla2:3156908:3171439 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ecetesla0:2859680:2859716 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ecetesla3:3048178:3075299 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+ecetesla0:2859680:2859717 [0] NCCL INFO [Proxy Service UDS] exit: stop 1 abortFlag 1
+ecetesla2:3156908:3171440 [0] NCCL INFO [Proxy Service UDS] exit: stop 1 abortFlag 1
+ecetesla4:340464:340506 [0] NCCL INFO [Proxy Service UDS] exit: stop 1 abortFlag 1
+ecetesla3:3048178:3075300 [0] NCCL INFO [Proxy Service UDS] exit: stop 1 abortFlag 1
+eceTesla1:3164543:3164575 [0] NCCL INFO [Proxy Service UDS] exit: stop 1 abortFlag 1
+eceTesla1:3164543:3164577 [0] NCCL INFO comm 0x838cd90 rank 1 nranks 5 cudaDev 0 busId a000 - Abort COMPLETE
+ecetesla4:340464:340508 [0] NCCL INFO comm 0x801adf0 rank 4 nranks 5 cudaDev 0 busId a000 - Abort COMPLETE
+ecetesla2:3156908:3172059 [0] NCCL INFO comm 0x8735d10 rank 2 nranks 5 cudaDev 0 busId a000 - Abort COMPLETE
+ecetesla0:2859680:2859719 [0] NCCL INFO comm 0x6cdf060 rank 0 nranks 5 cudaDev 0 busId 17000 - Abort COMPLETE
+ecetesla3:3048178:3076849 [0] NCCL INFO comm 0x785b100 rank 3 nranks 5 cudaDev 0 busId 1000 - Abort COMPLETE
