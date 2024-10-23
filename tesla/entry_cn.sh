@@ -1,8 +1,17 @@
 #!/bin/bash
 WATID=$1
+NCCL_DEBUG_OPT=0
 
-export NCCL_DEBUG=INFO
-export NCCL_DEBUG_SUBSYS=ALL
+if [ "$NCCL_DEBUG_OPT" -eq 1 ]; then
+    export NCCL_DEBUG=INFO
+    export NCCL_DEBUG_SUBSYS=ALL
+    echo "NCCL Debugging is enabled"
+else
+    # export NCCL_DEBUG=OFF
+    unset NCCL_DEBUG
+    unset NCCL_DEBUG_SUBSYS
+    echo "NCCL Debugging is disabled."
+fi
 
 # ===================Set NCCL environment variables to force TCP sockets
 # Disables InfiniBand if it's not available on the network. It forces NCCL to use TCP over sockets
@@ -19,7 +28,19 @@ export NCCL_PROTO=simple
 
 # Make sure CUDA_VISIBLE_DEVICES is set properly to avoid device ordinal 
 # Since there is only 1 GPU per 1 node
-export CUDA_VISIBLE_DEVICES=0              
+# Set CUDA_VISIBLE_DEVICES to map GPUs across nodes
+if [ "$HOSTNAME" == "ecetesla0" ]; then
+    export CUDA_VISIBLE_DEVICES=0
+elif [ "$HOSTNAME" == "ecetesla1" ]; then
+    export CUDA_VISIBLE_DEVICES=0
+elif [ "$HOSTNAME" == "ecetesla2" ]; then
+    export CUDA_VISIBLE_DEVICES=0
+elif [ "$HOSTNAME" == "ecetesla3" ]; then
+    export CUDA_VISIBLE_DEVICES=0
+elif [ "$HOSTNAME" == "ecetesla4" ]; then
+    export CUDA_VISIBLE_DEVICES=0
+fi
+            
 
 # Replace this to source new virtual environment
 source /home/$WATID/vit_env/bin/activate
@@ -31,4 +52,7 @@ source /home/$WATID/vit_env/bin/activate
 # python3 /home/$WATID/Scalable_ViT_DT/tesla/simple_test/test_nccl.py
 
 # Uncomment this to start running dummy example
-python3 /home/$WATID/Scalable_ViT_DT/tesla/script/baseline_measure.py
+# python3 /home/$WATID/Scalable_ViT_DT/tesla/script/baseline_measure.py
+
+#TEST Scalene
+scalene --gpu --reduced-profile --cpu --profile-interval 1 --outfile metrics_scalene.log python3 /home/$WATID/Scalable_ViT_DT/tesla/script/test_scalene.py
