@@ -1,0 +1,81 @@
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+[2024-11-03 00:27:48,406] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-03 00:27:48,436] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-03 00:27:48,573] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-03 00:27:48,845] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-03 00:27:49,480] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-03 00:27:49,480] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-03 00:27:49,493] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-03 00:27:49,493] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-03 00:27:49,736] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-03 00:27:49,736] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-03 00:27:50,554] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-03 00:27:50,554] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-03 00:27:50,992] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-03 00:27:54,003] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-03 00:27:54,003] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-03 00:27:54,328] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=1, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-03 00:27:54,328] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=4, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-03 00:27:54,328] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=2, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-03 00:27:54,327] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=3, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-03 00:27:54,328] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=0, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-03 00:27:54,328] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Rank 4: Epoch 1/10 complete in 0.0126 seconds
+Rank 3: Epoch 1/10 complete in 0.0137 seconds
+Rank 1: Epoch 1/10 complete in 0.0128 seconds
+Rank 2: Epoch 1/10 complete in 0.0132 seconds
+Rank 0: Epoch 1/10 complete in 0.0319 seconds
+Rank 0: Epoch 2/10 complete in 0.0003 seconds
+Rank 4: Epoch 2/10 complete in 0.0002 seconds
+Rank 3: Epoch 2/10 complete in 0.0003 seconds
+Rank 1: Epoch 2/10 complete in 0.0002 seconds
+Rank 2: Epoch 2/10 complete in 0.0003 seconds
+Rank 0: Epoch 3/10 complete in 0.0001 seconds
+Rank 4: Epoch 3/10 complete in 0.0001 seconds
+Rank 1: Epoch 3/10 complete in 0.0001 seconds
+Rank 2: Epoch 3/10 complete in 0.0001 seconds
+Rank 3: Epoch 3/10 complete in 0.0001 seconds
+Rank 0: Epoch 4/10 complete in 0.0001 seconds
+Rank 4: Epoch 4/10 complete in 0.0001 seconds
+Rank 2: Epoch 4/10 complete in 0.0001 seconds
+Rank 1: Epoch 4/10 complete in 0.0001 seconds
+Rank 3: Epoch 4/10 complete in 0.0001 seconds
+Rank 4: Epoch 5/10 complete in 0.0001 seconds
+Rank 1: Epoch 5/10 complete in 0.0001 seconds
+Rank 2: Epoch 5/10 complete in 0.0001 seconds
+Rank 3: Epoch 5/10 complete in 0.0001 seconds
+Rank 0: Epoch 5/10 complete in 0.0003 seconds
+Rank 0: Epoch 6/10 complete in 0.0001 seconds
+Rank 4: Epoch 6/10 complete in 0.0001 seconds
+Rank 2: Epoch 6/10 complete in 0.0001 seconds
+Rank 3: Epoch 6/10 complete in 0.0001 seconds
+Rank 1: Epoch 6/10 complete in 0.0001 seconds
+Rank 0: Epoch 7/10 complete in 0.0001 seconds
+Rank 4: Epoch 7/10 complete in 0.0001 seconds
+Rank 2: Epoch 7/10 complete in 0.0001 seconds
+Rank 1: Epoch 7/10 complete in 0.0001 seconds
+Rank 3: Epoch 7/10 complete in 0.0001 seconds
+Rank 4: Epoch 8/10 complete in 0.0001 seconds
+Rank 0: Epoch 8/10 complete in 0.0001 seconds
+Rank 1: Epoch 8/10 complete in 0.0001 seconds
+Rank 2: Epoch 8/10 complete in 0.0001 seconds
+Rank 3: Epoch 8/10 complete in 0.0001 seconds
+Rank 0: Epoch 9/10 complete in 0.0001 seconds
+Rank 4: Epoch 9/10 complete in 0.0001 seconds
+Rank 3: Epoch 9/10 complete in 0.0001 seconds
+Rank 1: Epoch 9/10 complete in 0.0001 seconds
+Rank 2: Epoch 9/10 complete in 0.0001 seconds
+Rank 0: Epoch 10/10 complete in 0.0001 seconds
+Rank 4: Epoch 10/10 complete in 0.0001 seconds
+Rank 2: Epoch 10/10 complete in 0.0001 seconds
+Rank 1: Epoch 10/10 complete in 0.0001 seconds
+Rank 3: Epoch 10/10 complete in 0.0001 seconds
