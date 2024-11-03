@@ -1,0 +1,6 @@
+psutil
+mpi4py
+gputil
+pandas
+matplotlib
+seaborn
