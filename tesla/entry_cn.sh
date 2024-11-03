@@ -15,18 +15,18 @@ fi
 
 # ===================Set NCCL environment variables to force TCP sockets
 # Disables InfiniBand if it's not available on the network. It forces NCCL to use TCP over sockets
-export NCCL_IB_DISABLE=1                  
+export NCCL_IB_DISABLE=1
 # Ensures that NCCL does not attempt to use GDR (GPUDirect RDMA) if not supported.
-export NCCL_NET_GDR_LEVEL=0        
-# Avoid using Docker and loopback interfaces        
-export NCCL_SOCKET_IFNAME=^docker,lo       
+export NCCL_NET_GDR_LEVEL=0
+# Avoid using Docker and loopback interfaces
+export NCCL_SOCKET_IFNAME=^docker,lo
 # [WILL THIS DEGRADE PERFORMANCE]? Set NCCL protocol to simple to simplify communication
-export NCCL_PROTO=simple                   
+export NCCL_PROTO=simple
 # ===================
 
 
 
-# Make sure CUDA_VISIBLE_DEVICES is set properly to avoid device ordinal 
+# Make sure CUDA_VISIBLE_DEVICES is set properly to avoid device ordinal
 # Since there is only 1 GPU per 1 node
 # Set CUDA_VISIBLE_DEVICES to map GPUs across nodes
 if [ "$HOSTNAME" == "ecetesla0" ]; then
@@ -40,7 +40,7 @@ elif [ "$HOSTNAME" == "ecetesla3" ]; then
 elif [ "$HOSTNAME" == "ecetesla4" ]; then
     export CUDA_VISIBLE_DEVICES=0
 fi
-            
+
 
 # Replace this to source new virtual environment
 source /home/$WATID/vit_env/bin/activate
@@ -55,4 +55,9 @@ source /home/$WATID/vit_env/bin/activate
 # python3 /home/$WATID/Scalable_ViT_DT/tesla/script/baseline_measure.py
 
 #TEST Scalene
-scalene --gpu --reduced-profile --cpu --profile-interval 1 --outfile metrics_scalene.log python3 /home/$WATID/Scalable_ViT_DT/tesla/script/test_scalene.py
+# scalene --gpu --reduced-profile --cpu --profile-interval 1 --outfile metrics_scalene.log python3 /home/$WATID/Scalable_ViT_DT/tesla/script/test_scalene.py
+
+#TEST Deepspeed
+# deepspeed --launcher mpirun --hostfile /home/$WATID/Scalable_ViT_DT/tesla/setup/hosts.txt /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/test_deepspeed.py
+# python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/test_deepspeed.py
+python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/test_deepseed.py           
