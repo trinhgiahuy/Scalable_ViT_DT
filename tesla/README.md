@@ -107,13 +107,22 @@ mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh h3trinh > deepspeed/run_te
 TODO
 ====
 
-- [ x ] Initialize deepspeed and test it run distributedly on 5 machines (deepspeed/test_deepspeed_2.py)
+### Deepspeed
 
+- [x] Initialize deepspeed and test it with dummy distributed matrix multiplcation on 5 machines (deepspeed/test_deepspeed_2.py)
 
-- [ ] Create dummy distributed matrix multiplcation and run on 5 different machines to benchmarking the performance (baseline_measure.py)
+- [x] Update the test to record GPU performance (using GPUtil)
 
-- [ ] Update the pipeline to record more metrics, design directory
+- [x] Write Python script to plot/virtualize from this log
 
-- [ ] Write Python script to plot/virtualize from dummy logs
+- [ ] Adapt the distributed training script
 
-- [ ] Adapt the distributed training script (not using deepspeed)
+### Torch distributed
+
+- [ ] Create torch distributed and run on 5 different machines to benchmarking the performance (baseline_measure.py)
+
+- [ ] Update the pipeline to record these metrics
+
+- [ ] Write Python script to plot/virtualize from this log
+
+- [ ] Adapt the distributed training script
