@@ -75,11 +75,16 @@ Verify torch is working with all machines by addding `python3 /home/$WATID/Scala
 mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh [YOUR_WATID]
 ```
 
+Install necessary packages/libs through
+
+```sh
+python3 -m pip install -r requirement.txt
+```
+
 USING DEEPSPEED
 ===============
 
 Create a `.deepspeed_env` file with the necessary environment variables. This file allows DeepSpeed to automatically propagate environment variables to each node.
-
 
 ```sh
 echo "NCCL_IB_DISABLE=1" > ~/.deepspeed_env
@@ -90,7 +95,6 @@ Install Deepspeed with MPI support using this command. And this can be found fro
 
 ```sh
 DS_BUILD_OPS=1 DS_BUILD_AIO=0 DS_BUILD_KERNELS=1 DS_BUILD_MPU=1 DS_BUILD_MII=0 pip install deepspeed
-pip install mpi4py
 ``` 
 
 Then run Deepspeed test with (enable `#TEST Deepspeed` option in ./entry_cn.sh)
@@ -102,6 +106,9 @@ mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh h3trinh > deepspeed/run_te
 
 TODO
 ====
+
+- [ x ] Initialize deepspeed and test it run distributedly on 5 machines (deepspeed/test_deepspeed_2.py)
+
 
 - [ ] Create dummy distributed matrix multiplcation and run on 5 different machines to benchmarking the performance (baseline_measure.py)
 
