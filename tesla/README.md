@@ -103,6 +103,14 @@ Then run Deepspeed test with (enable `#TEST Deepspeed` option in ./entry_cn.sh)
 mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh h3trinh > deepspeed/run_test_deepspeed.log
 ```
 
+(THE CODE DID NOT WORK YET) Encounter this error, it seems we should not enable fp16 in DeepSpeed
+
+```json
+      "_comment": "fp16 is not supported in Tesla0 and Tesla3 ValueError: Type fp16 is not supported", 
+      "fp16": {
+        "enabled": false
+      }
+```
 
 TODO
 ====

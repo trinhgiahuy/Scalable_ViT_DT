@@ -1,0 +1,5 @@
+{
+    "train_batch_size": 160,
+    "gradient_accumulation_steps": 1,
+    "micro_batch_per_gpu": 32
+  }
