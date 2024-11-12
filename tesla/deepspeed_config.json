@@ -1,5 +1,9 @@
 {
-    "train_batch_size": 160,
+    "train_batch_size": 3,
     "gradient_accumulation_steps": 1,
-    "micro_batch_per_gpu": 32
+    "micro_batch_per_gpu": 1,
+    "fp16": {
+      "enabled": true,
+      "initial_scale_power": 10
+    }
   }

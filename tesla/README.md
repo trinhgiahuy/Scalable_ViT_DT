@@ -112,6 +112,34 @@ mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh h3trinh > deepspeed/run_te
       }
 ```
 
+We first run homogenous case with 3 GPUs (tesla1,2,4) of RTX 3070 - 8GB using this deepspeed_config.json file
+```json
+{
+    "train_batch_size": 3,
+    "gradient_accumulation_steps": 1,
+    "micro_batch_per_gpu": 1,
+    "fp16": {
+      "enabled": true,
+      "initial_scale_power": 10
+    }
+  }
+```
+
+The `train_batch_size` should be equal to `gradient_accumulation_steps` * `micro_batch_per_gpu` * number of MPI processes running.
+
+Please note the GPU's memory is GPU is 8GB, using large `args.batch_size` would result in this error
+
+```sh
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)
+``` 
+
+Default enable of FP16, its dynamic loss scaling will encounter numerical instability for all every iterations. 
+
+![default_enable_fp16.png](image/default_enable_fp16.png)
+
+This happens because the loss scale is too high, resulting in values that exceed the representable range in FP16. We reduce the initial loss scale to avoid the dynamic scaler from starting too high by setting `"initial_scale_power": 10` and lower it if needed.
+ 
+
 TODO
 ====
 

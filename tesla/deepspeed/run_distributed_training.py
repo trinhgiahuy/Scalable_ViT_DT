@@ -17,7 +17,7 @@ def parse_args():
     #TODO: Add more later on
     #Add these arguments in entry_cn.sh file
     #?: Not sure but DeepSpeed does not use batch_size but use train_batch_size its own
-    parser.add_argument('--batch_size', type=int, default=64, help='Input batch size per GPU')
+    parser.add_argument('--batch_size', type=int, default=1, help='Input batch size per GPU')
     parser.add_argument('--epochs', type=int, default=5, help='Number of epochs to train')
     parser.add_argument('--dataset_percentage', type=float, default=0.1, help='Percentage of CIFAR-10 dataset to use')
     parser.add_argument('--data_path', type=str, default='./data', help='Path to the dataset')
@@ -70,6 +70,8 @@ def create_model():
     return model
 
 def get_data_loader(args):
+
+    # Preprocessing follows https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html#torchvision.models.ViT_B_16_Weights
     transform = transforms.Compose([
         transforms.Resize(224),
         transforms.ToTensor(),
@@ -90,7 +92,7 @@ def get_data_loader(args):
     subset_dataset = torch.utils.data.Subset(dataset, indices)
 
     # Distributed sampling ensures each GPU sees a unique subset
-    #TODO: Research here on imbalance
+    #TODO: Research here on imbalance (in case of non-homogenous)
     sampler = DistributedSampler(subset_dataset, shuffle=True)
 
     data_loader = DataLoader(subset_dataset, batch_size=args.batch_size, sampler=sampler, num_workers=2, pin_memory=True)
@@ -118,6 +120,8 @@ def train(args, model_engine, data_loader, criterion, logger):
 
         epoch_time = time.time() - epoch_start_time
         logger.info(f"Epoch [{epoch+1}/{args.epochs}] completed in {epoch_time:.2f} seconds")
+
+        torch.cuda.empty_cache()
 
 def main():
     args = parse_args()

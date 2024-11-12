@@ -59,7 +59,7 @@ source /home/$WATID/vit_env/bin/activate
 
 #TEST Deepspeed
 # deepspeed --launcher mpirun --hostfile /home/$WATID/Scalable_ViT_DT/tesla/setup/hosts.txt /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/test_deepspeed.py
-# python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/test_deepspeed_2.py  
+# python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/test_deepspeed_2.py
 
 #TEST test distributed training
-python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/run_distributed_training.py --deepspeed_config "deepspeed_config.json"      
+python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/run_distributed_training.py --deepspeed_config "deepspeed_config.json"
