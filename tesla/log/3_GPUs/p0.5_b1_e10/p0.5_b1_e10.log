@@ -1,0 +1,1281 @@
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+[2024-11-13 00:53:12,489] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-13 00:53:12,914] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-13 00:53:13,230] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-13 00:53:13,588] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-13 00:53:13,588] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-13 00:53:14,033] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-13 00:53:14,033] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-13 00:53:14,503] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-13 00:53:14,503] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-13 00:53:14,788] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=1, local_rank=0, world_size=3, master_addr=129.97.92.169, master_port=29500
+[2024-11-13 00:53:14,788] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=2, local_rank=0, world_size=3, master_addr=129.97.92.169, master_port=29500
+[2024-11-13 00:53:14,788] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=0, local_rank=0, world_size=3, master_addr=129.97.92.169, master_port=29500
+[2024-11-13 00:53:14,788] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-11-13 00:53:15,375] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 3
+[2024-11-13 00:53:15,387] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed info: version=0.15.4, git-hash=unknown, git-branch=unknown
+[2024-11-13 00:53:15,388] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 3
+[2024-11-13 00:53:15,400] [INFO] [config.py:733:__init__] Config mesh_device None world_size = 3
+[2024-11-13 00:53:15,800] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Flops Profiler Enabled: False
+[2024-11-13 00:53:15,801] [INFO] [logging.py:128:log_dist] [Rank 0] Using client Optimizer as basic optimizer
+[2024-11-13 00:53:15,801] [INFO] [logging.py:128:log_dist] [Rank 0] Removing param_group that has no 'params' in the basic Optimizer
+[2024-11-13 00:53:15,803] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Basic Optimizer = AdamW
+[2024-11-13 00:53:15,803] [INFO] [logging.py:128:log_dist] [Rank 0] Creating fp16 unfused optimizer with dynamic loss scale
+[2024-11-13 00:53:15,803] [INFO] [unfused_optimizer.py:46:__init__] Fused Lamb Legacy : False 
+[2024-11-13 00:53:16,025] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed Final Optimizer = FP16_UnfusedOptimizer
+[2024-11-13 00:53:16,025] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed using configured LR scheduler = None
+[2024-11-13 00:53:16,025] [INFO] [logging.py:128:log_dist] [Rank 0] DeepSpeed LR Scheduler = None
+[2024-11-13 00:53:16,025] [INFO] [logging.py:128:log_dist] [Rank 0] step=0, skipped=0, lr=[0.0001], mom=[(0.9, 0.999)]
+[2024-11-13 00:53:16,026] [INFO] [config.py:999:print] DeepSpeedEngine configuration:
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   activation_checkpointing_config  {
+    "partition_activations": false, 
+    "contiguous_memory_optimization": false, 
+    "cpu_checkpointing": false, 
+    "number_checkpoints": null, 
+    "synchronize_checkpoint_boundary": false, 
+    "profile": false
+}
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   aio_config ................... {'block_size': 1048576, 'queue_depth': 8, 'thread_count': 1, 'single_submit': False, 'overlap_events': True, 'use_gds': False}
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   amp_enabled .................. False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   amp_params ................... False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   autotuning_config ............ {
+    "enabled": false, 
+    "start_step": null, 
+    "end_step": null, 
+    "metric_path": null, 
+    "arg_mappings": null, 
+    "metric": "throughput", 
+    "model_info": null, 
+    "results_dir": "autotuning_results", 
+    "exps_dir": "autotuning_exps", 
+    "overwrite": true, 
+    "fast": true, 
+    "start_profile_step": 3, 
+    "end_profile_step": 5, 
+    "tuner_type": "gridsearch", 
+    "tuner_early_stopping": 5, 
+    "tuner_num_trials": 50, 
+    "model_info_path": null, 
+    "mp_size": 1, 
+    "max_train_batch_size": null, 
+    "min_train_batch_size": 1, 
+    "max_train_micro_batch_size_per_gpu": 1.024000e+03, 
+    "min_train_micro_batch_size_per_gpu": 1, 
+    "num_tuning_micro_batch_sizes": 3
+}
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   bfloat16_enabled ............. False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   bfloat16_immediate_grad_update  False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   checkpoint_parallel_write_pipeline  False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   checkpoint_tag_validation_enabled  True
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   checkpoint_tag_validation_fail  False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   comms_config ................. <deepspeed.comm.config.DeepSpeedCommsConfig object at 0x7f7405335fa0>
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   communication_data_type ...... None
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   compression_config ........... {'weight_quantization': {'shared_parameters': {'enabled': False, 'quantizer_kernel': False, 'schedule_offset': 0, 'quantize_groups': 1, 'quantize_verbose': False, 'quantization_type': 'symmetric', 'quantize_weight_in_forward': False, 'rounding': 'nearest', 'fp16_mixed_quantize': False, 'quantize_change_ratio': 0.001}, 'different_groups': {}}, 'activation_quantization': {'shared_parameters': {'enabled': False, 'quantization_type': 'symmetric', 'range_calibration': 'dynamic', 'schedule_offset': 1000}, 'different_groups': {}}, 'sparse_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'row_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'head_pruning': {'shared_parameters': {'enabled': False, 'method': 'topk', 'schedule_offset': 1000}, 'different_groups': {}}, 'channel_pruning': {'shared_parameters': {'enabled': False, 'method': 'l1', 'schedule_offset': 1000}, 'different_groups': {}}, 'layer_reduction': {'enabled': False}}
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   curriculum_enabled_legacy .... False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   curriculum_params_legacy ..... False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   data_efficiency_config ....... {'enabled': False, 'seed': 1234, 'data_sampling': {'enabled': False, 'num_epochs': 1000, 'num_workers': 0, 'curriculum_learning': {'enabled': False}}, 'data_routing': {'enabled': False, 'random_ltd': {'enabled': False, 'layer_token_lr_schedule': {'enabled': False}}}}
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   data_efficiency_enabled ...... False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   dataloader_drop_last ......... False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   disable_allgather ............ False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   dump_state ................... False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   dynamic_loss_scale_args ...... {'init_scale': 1024, 'scale_window': 1000, 'delayed_shift': 2, 'consecutive_hysteresis': False, 'min_scale': 1}
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   eigenvalue_enabled ........... False
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   eigenvalue_gas_boundary_resolution  1
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   eigenvalue_layer_name ........ bert.encoder.layer
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   eigenvalue_layer_num ......... 0
+[2024-11-13 00:53:16,026] [INFO] [config.py:1003:print]   eigenvalue_max_iter .......... 100
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   eigenvalue_stability ......... 1e-06
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   eigenvalue_tol ............... 0.01
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   eigenvalue_verbose ........... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   elasticity_enabled ........... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   flops_profiler_config ........ {
+    "enabled": false, 
+    "recompute_fwd_factor": 0.0, 
+    "profile_step": 1, 
+    "module_depth": -1, 
+    "top_modules": 1, 
+    "detailed": true, 
+    "output_file": null
+}
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   fp16_auto_cast ............... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   fp16_enabled ................. True
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   fp16_master_weights_and_gradients  False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   global_rank .................. 0
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   grad_accum_dtype ............. None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   gradient_accumulation_steps .. 1
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   gradient_clipping ............ 0.0
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   gradient_predivide_factor .... 1.0
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   graph_harvesting ............. False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   hybrid_engine ................ enabled=False max_out_tokens=512 inference_tp_size=1 release_inference_cache=False pin_parameters=True tp_gather_partition_size=8
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   initial_dynamic_scale ........ 1024
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   load_universal_checkpoint .... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   loss_scale ................... 0
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   memory_breakdown ............. False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   mics_hierarchial_params_gather  False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   mics_shard_size .............. -1
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   monitor_config ............... tensorboard=TensorBoardConfig(enabled=False, output_path='', job_name='DeepSpeedJobName') comet=CometConfig(enabled=False, samples_log_interval=100, project=None, workspace=None, api_key=None, experiment_name=None, experiment_key=None, online=None, mode=None) wandb=WandbConfig(enabled=False, group=None, team=None, project='deepspeed') csv_monitor=CSVConfig(enabled=False, output_path='', job_name='DeepSpeedJobName')
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   nebula_config ................ {
+    "enabled": false, 
+    "persistent_storage_path": null, 
+    "persistent_time_interval": 100, 
+    "num_of_version_in_retention": 2, 
+    "enable_nebula_load": true, 
+    "load_path": null
+}
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   optimizer_legacy_fusion ...... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   optimizer_name ............... None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   optimizer_params ............. None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   pipeline ..................... {'stages': 'auto', 'partition': 'best', 'seed_layers': False, 'activation_checkpoint_interval': 0, 'pipe_partitioned': True, 'grad_partitioned': True}
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   pld_enabled .................. False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   pld_params ................... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   prescale_gradients ........... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   scheduler_name ............... None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   scheduler_params ............. None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   seq_parallel_communication_data_type  torch.float32
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   sparse_attention ............. None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   sparse_gradients_enabled ..... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   steps_per_print .............. None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   timers_config ................ enabled=True synchronized=True
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   train_batch_size ............. 3
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   train_micro_batch_size_per_gpu  1
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   use_data_before_expert_parallel_  False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   use_node_local_storage ....... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   wall_clock_breakdown ......... False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   weight_quantization_config ... None
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   world_size ................... 3
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   zero_allow_untested_optimizer  False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   zero_config .................. stage=0 contiguous_gradients=True reduce_scatter=True reduce_bucket_size=500000000 use_multi_rank_bucket_allreduce=True allgather_partitions=True allgather_bucket_size=500000000 overlap_comm=False load_from_fp32_weights=True elastic_checkpoint=False offload_param=None offload_optimizer=None sub_group_size=1000000000 cpu_offload_param=None cpu_offload_use_pin_memory=None cpu_offload=None prefetch_bucket_size=50000000 param_persistence_threshold=100000 model_persistence_threshold=9223372036854775807 max_live_parameters=1000000000 max_reuse_distance=1000000000 gather_16bit_weights_on_model_save=False use_all_reduce_for_fetch_params=False stage3_gather_fp16_weights_on_model_save=False ignore_unused_parameters=True legacy_stage1=False round_robin_gradients=False zero_hpz_partition_size=1 zero_quantized_weights=False zero_quantized_nontrainable_weights=False zero_quantized_gradients=False mics_shard_size=-1 mics_hierarchical_params_gather=False memory_efficient_linear=True pipeline_loading_checkpoint=False override_module_apply=True
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   zero_enabled ................. False
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   zero_force_ds_cpu_optimizer .. True
+[2024-11-13 00:53:16,027] [INFO] [config.py:1003:print]   zero_optimization_stage ...... 0
+[2024-11-13 00:53:16,028] [INFO] [config.py:989:print_user_config]   json = {
+    "train_batch_size": 3, 
+    "gradient_accumulation_steps": 1, 
+    "micro_batch_per_gpu": 1, 
+    "fp16": {
+        "enabled": true, 
+        "initial_scale_power": 10
+    }
+}
+Files already downloaded and verified
+[2024-11-13 00:58:00,590] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 00:58:00,590] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024 to 2048.0
+[2024-11-13 00:58:00,591] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 00:58:00,591] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024 to 2048.0
+[2024-11-13 00:58:00,593] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 00:58:00,593] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024 to 2048.0
+[2024-11-13 01:01:11,762] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 1696
+[2024-11-13 01:01:11,762] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:01:11,762] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:01:11,763] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 1696
+[2024-11-13 01:01:11,763] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:01:11,763] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:01:11,764] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 1696
+[2024-11-13 01:01:11,764] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:01:11,764] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:05:51,207] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:05:51,207] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:05:51,208] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:05:51,208] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:05:51,208] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:05:51,208] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:10:31,782] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:10:31,782] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:10:31,783] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:10:31,783] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:10:31,783] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:10:31,783] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:10:33,375] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 3703
+[2024-11-13 01:10:33,375] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:10:33,375] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:10:33,375] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 3703
+[2024-11-13 01:10:33,376] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:10:33,376] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:10:33,377] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 3703
+[2024-11-13 01:10:33,377] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:10:33,377] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:15:13,045] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:15:13,046] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:15:13,047] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:15:13,047] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:15:13,048] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:15:13,048] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:15:13,615] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 4706
+[2024-11-13 01:15:13,615] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:15:13,615] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:15:13,614] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 4706
+[2024-11-13 01:15:13,614] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:15:13,614] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:15:13,615] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 4706
+[2024-11-13 01:15:13,615] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:15:13,615] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:19:54,153] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:19:54,153] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:19:54,152] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:19:54,152] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:19:54,155] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:19:54,155] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 01:19:55,235] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 5711
+[2024-11-13 01:19:55,235] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:19:55,235] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:19:55,234] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 5711
+[2024-11-13 01:19:55,235] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:19:55,235] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:19:55,237] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 5711
+[2024-11-13 01:19:55,237] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 01:19:55,237] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 01:21:41,371] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 6098
+[2024-11-13 01:21:41,371] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:21:41,371] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:21:41,373] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 6098
+[2024-11-13 01:21:41,373] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:21:41,373] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:21:41,374] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 6098
+[2024-11-13 01:21:41,374] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:21:41,374] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:26:20,581] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:26:20,581] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:26:20,584] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:26:20,584] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:26:20,586] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:26:20,587] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:27:46,657] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 7406
+[2024-11-13 01:27:46,657] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:27:46,657] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:27:46,657] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 7406
+[2024-11-13 01:27:46,657] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:27:46,657] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:27:46,659] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 7406
+[2024-11-13 01:27:46,660] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:27:46,660] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:32:26,084] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:32:26,084] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:32:26,083] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:32:26,083] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:32:26,085] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:32:26,086] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:33:58,229] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 8743
+[2024-11-13 01:33:58,229] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:33:58,229] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:33:58,233] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 8743
+[2024-11-13 01:33:58,234] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:33:58,234] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:33:58,235] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 8743
+[2024-11-13 01:33:58,235] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:33:58,235] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:38:35,687] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:38:35,689] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:38:35,687] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:38:35,689] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:38:35,689] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:38:35,689] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:38:47,481] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 9787
+[2024-11-13 01:38:47,481] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:38:47,481] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:38:47,483] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 9787
+[2024-11-13 01:38:47,483] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:38:47,483] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:38:47,484] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 9787
+[2024-11-13 01:38:47,484] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:38:47,484] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:43:27,482] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:43:27,482] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:43:27,484] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:43:27,484] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:43:27,485] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:43:27,486] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:45:25,359] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 11211
+[2024-11-13 01:45:25,359] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:45:25,359] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:45:25,361] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 11211
+[2024-11-13 01:45:25,361] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:45:25,361] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:45:25,362] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 11211
+[2024-11-13 01:45:25,362] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:45:25,362] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:50:02,249] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:50:02,249] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:50:02,253] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:50:02,253] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:50:02,253] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:50:02,254] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:51:36,187] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 12551
+[2024-11-13 01:51:36,187] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:51:36,188] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:51:36,190] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 12551
+[2024-11-13 01:51:36,190] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:51:36,190] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:51:36,191] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 12551
+[2024-11-13 01:51:36,191] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:51:36,191] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:56:14,606] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:56:14,607] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:56:14,605] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:56:14,605] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:56:14,609] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 01:56:14,609] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 01:57:49,503] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 13891
+[2024-11-13 01:57:49,503] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:57:49,503] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:57:49,507] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 13891
+[2024-11-13 01:57:49,507] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:57:49,507] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 01:57:49,507] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 13891
+[2024-11-13 01:57:49,507] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 01:57:49,508] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:02:28,703] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:02:28,703] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:02:28,705] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:02:28,705] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:02:28,703] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:02:28,703] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:03:30,169] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 15114
+[2024-11-13 02:03:30,169] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:03:30,169] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:03:30,167] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 15114
+[2024-11-13 02:03:30,167] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:03:30,167] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:03:30,171] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 15114
+[2024-11-13 02:03:30,171] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:03:30,171] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:08:05,428] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:08:05,428] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:08:05,432] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:08:05,432] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:08:05,433] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:08:05,433] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:08:59,308] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 16307
+[2024-11-13 02:08:59,308] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:08:59,308] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:08:59,306] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 16307
+[2024-11-13 02:08:59,307] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:08:59,307] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:08:59,310] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 16307
+[2024-11-13 02:08:59,310] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:08:59,310] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:13:37,862] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:13:37,862] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:13:37,864] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:13:37,865] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:13:37,865] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:13:37,866] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:18:12,705] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:18:12,705] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:18:12,709] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:18:12,709] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:18:12,709] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:18:12,709] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:18:13,855] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 18312
+[2024-11-13 02:18:13,855] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:18:13,855] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:18:13,854] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 18312
+[2024-11-13 02:18:13,854] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:18:13,854] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:18:13,859] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 18312
+[2024-11-13 02:18:13,859] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:18:13,859] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:22:52,067] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:22:52,067] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:22:52,065] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:22:52,065] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:22:52,069] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:22:52,069] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:22:52,319] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 19314
+[2024-11-13 02:22:52,322] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 19314
+[2024-11-13 02:22:52,319] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:22:52,319] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:22:52,322] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:22:52,322] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 19314
+[2024-11-13 02:22:52,322] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:22:52,322] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:22:52,322] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:26:41,353] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 20134
+[2024-11-13 02:26:41,353] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:26:41,353] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:26:41,350] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 20134
+[2024-11-13 02:26:41,350] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:26:41,350] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:26:41,355] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 20134
+[2024-11-13 02:26:41,355] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:26:41,355] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:31:20,122] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:31:20,122] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:31:20,120] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:31:20,120] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:31:20,124] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:31:20,124] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:33:47,747] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 21664
+[2024-11-13 02:33:47,747] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:33:47,747] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:33:47,743] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 21664
+[2024-11-13 02:33:47,743] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:33:47,743] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:33:47,747] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 21664
+[2024-11-13 02:33:47,747] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:33:47,747] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:38:21,757] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:38:21,757] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:38:21,755] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:38:21,755] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:38:21,760] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:38:21,760] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:41:34,171] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 23359
+[2024-11-13 02:41:34,171] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:41:34,171] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:41:34,169] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 23359
+[2024-11-13 02:41:34,169] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:41:34,169] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:41:34,173] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 23359
+[2024-11-13 02:41:34,173] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 02:41:34,174] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 02:46:09,398] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:46:09,398] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:46:09,401] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:46:09,401] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:46:09,402] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:46:09,402] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 02:50:44,374] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:50:44,374] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:50:44,377] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:50:44,377] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:50:44,377] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:50:44,378] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:50:45,351] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 25363
+[2024-11-13 02:50:45,351] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:50:45,351] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:50:45,348] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 25363
+[2024-11-13 02:50:45,348] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:50:45,348] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:50:45,353] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 25363
+[2024-11-13 02:50:45,353] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:50:45,353] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:55:20,682] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:55:20,682] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:55:20,687] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:55:20,687] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:55:20,687] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:55:20,687] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:55:22,216] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 26370
+[2024-11-13 02:55:22,216] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:55:22,216] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:55:22,213] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 26370
+[2024-11-13 02:55:22,213] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:55:22,213] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:55:22,216] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 26370
+[2024-11-13 02:55:22,216] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:55:22,216] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:59:58,340] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:59:58,340] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:59:58,339] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:59:58,339] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:59:58,343] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 02:59:58,343] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 02:59:58,628] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 27372
+[2024-11-13 02:59:58,628] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:59:58,628] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:59:58,631] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 27372
+[2024-11-13 02:59:58,631] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:59:58,631] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 02:59:58,633] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 27372
+[2024-11-13 02:59:58,633] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 02:59:58,633] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:04:35,140] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:04:35,137] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:04:35,140] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:04:35,137] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:04:35,141] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:04:35,141] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:04:35,965] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 28376
+[2024-11-13 03:04:35,965] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:04:35,965] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:04:35,963] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 28376
+[2024-11-13 03:04:35,963] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:04:35,963] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:04:35,967] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 28376
+[2024-11-13 03:04:35,967] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:04:35,967] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:09:14,247] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:09:14,247] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:09:14,245] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:09:14,245] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:09:14,250] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:09:14,250] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:09:14,842] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 29379
+[2024-11-13 03:09:14,842] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:09:14,842] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:09:14,841] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 29379
+[2024-11-13 03:09:14,841] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:09:14,841] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:09:14,845] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 29379
+[2024-11-13 03:09:14,845] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:09:14,845] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:13:53,484] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:13:53,481] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:13:53,482] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:13:53,484] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:13:53,485] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:13:53,486] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:13:54,036] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 30382
+[2024-11-13 03:13:54,036] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:13:54,036] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:13:54,041] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 30382
+[2024-11-13 03:13:54,041] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:13:54,041] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:13:54,041] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 30382
+[2024-11-13 03:13:54,041] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:13:54,041] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:18:28,924] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:18:28,925] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:18:28,925] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:18:28,925] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:18:28,928] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:18:28,929] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:18:29,712] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 31386
+[2024-11-13 03:18:29,712] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:18:29,712] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:18:29,716] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 31386
+[2024-11-13 03:18:29,717] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:18:29,717] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:18:29,717] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 31386
+[2024-11-13 03:18:29,717] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:18:29,717] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:23:07,894] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:23:07,894] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:23:07,892] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:23:07,892] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:23:07,896] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:23:07,896] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:23:08,913] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 32391
+[2024-11-13 03:23:08,913] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:23:08,916] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 32391
+[2024-11-13 03:23:08,913] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:23:08,916] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:23:08,916] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 32391
+[2024-11-13 03:23:08,916] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:23:08,916] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:23:08,916] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:27:46,503] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:27:46,503] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:27:46,507] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:27:46,508] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:27:46,508] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:27:46,508] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:27:48,257] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 33398
+[2024-11-13 03:27:48,257] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:27:48,257] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:27:48,261] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 33398
+[2024-11-13 03:27:48,261] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:27:48,261] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:27:48,262] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 33398
+[2024-11-13 03:27:48,262] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:27:48,262] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:32:22,581] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:32:22,581] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:32:22,579] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:32:22,579] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:32:22,584] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:32:22,584] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:32:25,385] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 34409
+[2024-11-13 03:32:25,385] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:32:25,385] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:32:25,390] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 34409
+[2024-11-13 03:32:25,390] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:32:25,390] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:32:25,390] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 34409
+[2024-11-13 03:32:25,390] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:32:25,390] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:36:59,188] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:36:59,188] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:36:59,191] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:36:59,191] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:36:59,192] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:36:59,192] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:36:59,441] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 35411
+[2024-11-13 03:36:59,441] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:36:59,441] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:36:59,443] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 35411
+[2024-11-13 03:36:59,444] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:36:59,444] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:36:59,445] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 35411
+[2024-11-13 03:36:59,445] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:36:59,445] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:41:32,809] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:41:32,810] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:41:32,810] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:41:32,810] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:41:32,808] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:41:32,808] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:41:34,089] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 36417
+[2024-11-13 03:41:34,089] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:41:34,089] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:41:34,087] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 36417
+[2024-11-13 03:41:34,087] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:41:34,087] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:41:34,091] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 36417
+[2024-11-13 03:41:34,091] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:41:34,091] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:46:07,827] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:46:07,827] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:46:07,830] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:46:07,831] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:46:07,830] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:46:07,831] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:46:10,113] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 37427
+[2024-11-13 03:46:10,113] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:46:10,113] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:46:10,116] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 37427
+[2024-11-13 03:46:10,116] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:46:10,116] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:46:10,117] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 37427
+[2024-11-13 03:46:10,117] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:46:10,117] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:50:45,152] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:50:45,152] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:50:45,151] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:50:45,151] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:50:45,154] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:50:45,154] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:50:45,961] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 38431
+[2024-11-13 03:50:45,961] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:50:45,961] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:50:45,965] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 38431
+[2024-11-13 03:50:45,965] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:50:45,965] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:50:45,965] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 38431
+[2024-11-13 03:50:45,965] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:50:45,965] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:55:19,308] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:55:19,308] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:55:19,307] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:55:19,307] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:55:19,312] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 03:55:19,313] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 03:55:19,600] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 39433
+[2024-11-13 03:55:19,601] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:55:19,601] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:55:19,599] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 39433
+[2024-11-13 03:55:19,599] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:55:19,599] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 03:55:19,605] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 39433
+[2024-11-13 03:55:19,605] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 03:55:19,605] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:00:02,486] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:00:02,486] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:00:02,486] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:00:02,486] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:00:02,490] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:00:02,490] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:00:05,959] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 40447
+[2024-11-13 04:00:05,959] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:00:05,959] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:00:05,957] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 40447
+[2024-11-13 04:00:05,958] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:00:05,958] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:00:05,961] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 40447
+[2024-11-13 04:00:05,961] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:00:05,961] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:04:49,113] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:04:49,113] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:04:49,117] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:04:49,117] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:04:49,118] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:04:49,118] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:04:51,046] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 41455
+[2024-11-13 04:04:51,046] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:04:51,046] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:04:51,049] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 41455
+[2024-11-13 04:04:51,049] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:04:51,050] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:04:51,049] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 41455
+[2024-11-13 04:04:51,049] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:04:51,049] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:08:08,430] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 42171
+[2024-11-13 04:08:08,430] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 04:08:08,430] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 04:08:08,434] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 42171
+[2024-11-13 04:08:08,434] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 04:08:08,434] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 04:08:08,434] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 42171
+[2024-11-13 04:08:08,434] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 04:08:08,434] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 04:12:46,550] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:12:46,550] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 04:12:46,552] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:12:46,552] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 04:12:46,550] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:12:46,550] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 04:17:22,881] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:17:22,880] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:17:22,880] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:17:22,882] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:17:22,883] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:17:22,884] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:17:25,035] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 44180
+[2024-11-13 04:17:25,037] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 44180
+[2024-11-13 04:17:25,035] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:17:25,035] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:17:25,037] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:17:25,037] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:17:25,038] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 44180
+[2024-11-13 04:17:25,038] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:17:25,038] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:22:00,568] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:22:00,568] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:22:00,567] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:22:00,567] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:22:00,568] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:22:00,568] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:22:02,597] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 45188
+[2024-11-13 04:22:02,597] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:22:02,598] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:22:02,602] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 45188
+[2024-11-13 04:22:02,602] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:22:02,602] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:22:02,602] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 45188
+[2024-11-13 04:22:02,602] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:22:02,602] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:24:58,610] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 45829
+[2024-11-13 04:24:58,610] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 04:24:58,610] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 04:24:58,613] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 45829
+[2024-11-13 04:24:58,613] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 04:24:58,613] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 04:24:58,613] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 45829
+[2024-11-13 04:24:58,613] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+[2024-11-13 04:24:58,613] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 2048.0, reducing to 1024.0
+[2024-11-13 04:29:39,610] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:29:39,610] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 04:29:39,610] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:29:39,610] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 04:29:39,613] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:29:39,614] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 1024.0 to 2048.0
+[2024-11-13 04:34:15,583] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:34:15,583] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:34:15,583] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:34:15,583] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:34:15,584] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:34:15,585] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:34:16,355] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 47833
+[2024-11-13 04:34:16,355] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:34:16,355] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:34:16,355] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 47833
+[2024-11-13 04:34:16,355] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:34:16,355] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:34:16,354] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 47833
+[2024-11-13 04:34:16,354] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:34:16,354] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:38:54,578] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:38:54,578] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:38:54,579] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:38:54,579] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:38:54,581] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:38:54,581] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:38:57,404] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 48845
+[2024-11-13 04:38:57,404] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:38:57,404] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:38:57,405] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 48845
+[2024-11-13 04:38:57,405] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:38:57,405] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 48845
+[2024-11-13 04:38:57,405] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:38:57,406] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:38:57,406] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:43:31,959] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:43:31,959] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:43:31,959] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:43:31,959] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:43:31,961] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:43:31,961] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:43:32,223] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 49847
+[2024-11-13 04:43:32,223] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:43:32,223] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:43:32,224] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 49847
+[2024-11-13 04:43:32,224] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:43:32,224] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:43:32,226] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 49847
+[2024-11-13 04:43:32,226] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:43:32,226] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:48:12,855] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:48:12,855] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:48:12,854] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:48:12,855] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:48:12,857] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:48:12,857] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:48:13,409] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 50850
+[2024-11-13 04:48:13,409] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:48:13,409] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:48:13,409] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 50850
+[2024-11-13 04:48:13,409] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:48:13,409] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:48:13,411] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 50850
+[2024-11-13 04:48:13,411] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:48:13,412] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:52:56,304] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:52:56,304] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:52:56,304] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:52:56,304] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:52:56,306] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:52:56,307] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:52:56,595] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 51852
+[2024-11-13 04:52:56,595] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:52:56,595] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:52:56,596] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 51852
+[2024-11-13 04:52:56,596] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:52:56,596] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:52:56,598] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 51852
+[2024-11-13 04:52:56,598] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:52:56,598] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:57:35,063] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:57:35,063] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:57:35,064] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:57:35,065] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:57:35,065] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 04:57:35,066] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 04:57:38,747] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 52866
+[2024-11-13 04:57:38,747] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:57:38,748] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 52866
+[2024-11-13 04:57:38,747] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:57:38,748] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:57:38,748] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 04:57:38,748] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 52866
+[2024-11-13 04:57:38,749] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 04:57:38,749] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:02:19,187] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:02:19,187] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:02:19,187] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:02:19,187] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:02:19,188] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:02:19,188] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:02:21,502] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 53875
+[2024-11-13 05:02:21,503] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:02:21,503] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:02:21,503] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 53875
+[2024-11-13 05:02:21,503] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:02:21,503] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:02:21,504] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 53875
+[2024-11-13 05:02:21,504] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:02:21,504] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:06:57,574] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:06:57,574] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:06:57,575] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:06:57,575] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:06:57,576] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:06:57,576] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:06:58,914] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 54880
+[2024-11-13 05:06:58,914] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:06:58,914] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:06:58,916] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 54880
+[2024-11-13 05:06:58,916] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:06:58,916] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:06:58,916] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 54880
+[2024-11-13 05:06:58,916] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:06:58,916] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:11:36,091] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:11:36,091] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:11:36,091] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:11:36,091] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:11:36,092] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:11:36,092] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:11:38,187] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 55889
+[2024-11-13 05:11:38,187] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:11:38,187] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:11:38,188] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 55889
+[2024-11-13 05:11:38,188] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:11:38,188] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:11:38,189] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 55889
+[2024-11-13 05:11:38,189] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:11:38,189] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:16:13,531] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:16:13,531] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:16:13,531] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:16:13,531] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:16:13,531] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:16:13,532] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:16:17,828] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 56905
+[2024-11-13 05:16:17,828] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:16:17,828] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:16:17,829] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 56905
+[2024-11-13 05:16:17,829] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:16:17,829] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:16:17,830] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 56905
+[2024-11-13 05:16:17,830] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:16:17,830] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:20:51,927] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:20:51,927] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:20:51,929] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:20:51,929] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:20:51,930] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:20:51,931] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:20:57,408] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 57927
+[2024-11-13 05:20:57,408] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:20:57,408] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:20:57,409] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 57927
+[2024-11-13 05:20:57,410] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:20:57,410] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:20:57,409] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 57927
+[2024-11-13 05:20:57,410] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:20:57,410] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:25:41,421] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:25:41,421] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:25:41,421] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:25:41,421] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:25:41,421] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:25:41,422] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:25:42,749] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 58933
+[2024-11-13 05:25:42,749] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:25:42,749] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:25:42,749] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 58933
+[2024-11-13 05:25:42,749] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:25:42,749] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:25:42,750] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 58933
+[2024-11-13 05:25:42,751] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:25:42,751] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:30:15,502] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:30:15,502] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:30:15,503] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:30:15,504] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:30:15,504] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:30:15,504] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:30:20,970] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 59954
+[2024-11-13 05:30:20,970] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:30:20,970] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:30:20,970] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 59954
+[2024-11-13 05:30:20,971] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:30:20,971] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:30:20,972] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 59954
+[2024-11-13 05:30:20,973] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:30:20,973] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:34:53,305] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:34:53,305] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:34:53,305] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:34:53,305] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:34:53,306] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:34:53,306] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:34:55,181] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 60962
+[2024-11-13 05:34:55,181] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:34:55,181] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:34:55,181] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 60962
+[2024-11-13 05:34:55,181] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:34:55,181] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:34:55,181] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 60962
+[2024-11-13 05:34:55,182] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:34:55,182] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:39:33,831] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:39:33,831] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:39:33,831] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:39:33,831] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:39:33,832] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:39:33,832] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:39:36,530] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 61973
+[2024-11-13 05:39:36,530] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:39:36,530] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:39:36,531] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 61973
+[2024-11-13 05:39:36,532] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:39:36,532] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:39:36,533] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 61973
+[2024-11-13 05:39:36,533] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:39:36,533] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:44:14,289] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:44:14,290] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:44:14,290] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:44:14,290] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:44:14,291] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:44:14,291] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:44:16,323] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 62982
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 62982
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 62982
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:44:16,324] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:48:50,788] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:48:50,788] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:48:50,789] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:48:50,789] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:48:50,789] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:48:50,789] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 64004
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 64004
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 64004
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:48:56,356] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:53:29,977] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:53:29,977] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:53:29,977] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:53:29,977] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:53:29,978] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:53:29,978] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:53:35,031] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 65024
+[2024-11-13 05:53:35,031] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:53:35,031] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:53:35,032] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 65024
+[2024-11-13 05:53:35,032] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:53:35,032] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:53:35,032] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 65024
+[2024-11-13 05:53:35,032] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:53:35,032] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:58:09,631] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:58:09,631] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:58:09,631] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:58:09,632] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:58:09,632] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 05:58:09,632] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 05:58:12,965] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 66037
+[2024-11-13 05:58:12,965] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:58:12,965] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:58:12,965] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 66037
+[2024-11-13 05:58:12,966] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:58:12,966] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 05:58:12,966] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 66037
+[2024-11-13 05:58:12,966] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 05:58:12,966] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:02:45,997] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:02:45,997] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:02:45,997] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:02:45,997] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:02:45,998] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:02:45,998] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:02:49,046] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 67049
+[2024-11-13 06:02:49,046] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:02:49,046] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:02:49,047] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 67049
+[2024-11-13 06:02:49,048] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:02:49,048] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:02:49,048] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 67049
+[2024-11-13 06:02:49,049] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:02:49,049] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:07:21,378] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:07:21,378] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:07:21,379] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:07:21,380] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:07:21,380] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:07:21,380] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:07:24,530] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 68062
+[2024-11-13 06:07:24,530] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:07:24,530] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:07:24,531] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 68062
+[2024-11-13 06:07:24,531] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:07:24,531] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:07:24,531] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 68062
+[2024-11-13 06:07:24,531] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:07:24,531] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:12:01,142] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:12:01,142] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:12:01,142] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:12:01,142] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:12:01,143] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:12:01,143] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:12:02,753] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 69069
+[2024-11-13 06:12:02,753] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:12:02,753] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:12:02,753] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 69069
+[2024-11-13 06:12:02,753] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:12:02,754] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:12:02,754] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 69069
+[2024-11-13 06:12:02,754] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:12:02,754] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:16:39,946] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:16:39,946] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:16:39,948] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:16:39,948] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:16:39,949] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:16:39,949] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:16:41,159] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 70074
+[2024-11-13 06:16:41,160] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:16:41,160] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:16:41,161] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 70074
+[2024-11-13 06:16:41,161] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:16:41,161] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:16:41,162] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 70074
+[2024-11-13 06:16:41,162] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:16:41,162] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:21:14,032] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:21:14,032] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:21:14,033] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:21:14,033] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:21:14,033] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:21:14,034] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 71097
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:21:20,258] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 71097
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 71097
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:21:20,259] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:25:52,207] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:25:52,207] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:25:52,207] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:25:52,207] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:25:52,208] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:25:52,208] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:25:58,488] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 72119
+[2024-11-13 06:25:58,488] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:25:58,488] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:25:58,489] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 72119
+[2024-11-13 06:25:58,490] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:25:58,490] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:25:58,490] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 72119
+[2024-11-13 06:25:58,490] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:25:58,490] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:30:33,516] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:30:33,516] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:30:33,516] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:30:33,516] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:30:33,517] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:30:33,517] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:30:42,978] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 73154
+[2024-11-13 06:30:42,978] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:30:42,978] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:30:42,979] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 73154
+[2024-11-13 06:30:42,978] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 73154
+[2024-11-13 06:30:42,979] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:30:42,979] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:30:42,979] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:30:42,979] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:35:17,207] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:35:17,207] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:35:17,207] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:35:17,207] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:35:17,207] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:35:17,207] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:35:21,503] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 74170
+[2024-11-13 06:35:21,503] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:35:21,503] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:35:21,504] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 74170
+[2024-11-13 06:35:21,504] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:35:21,504] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:35:21,504] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 74170
+[2024-11-13 06:35:21,504] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:35:21,504] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:39:57,243] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:39:57,243] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:39:57,243] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:39:57,243] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:39:57,243] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:39:57,243] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:40:13,359] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 75228
+[2024-11-13 06:40:13,359] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:40:13,359] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 75228
+[2024-11-13 06:40:13,359] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:40:13,359] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:40:13,359] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:40:13,359] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 75228
+[2024-11-13 06:40:13,360] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:40:13,360] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:44:45,960] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:44:45,961] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:44:45,960] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:44:45,961] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:44:45,961] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:44:45,962] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:45:11,717] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 76317
+[2024-11-13 06:45:11,718] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:45:11,718] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:45:11,717] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 76317
+[2024-11-13 06:45:11,717] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:45:11,717] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:45:11,717] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 76317
+[2024-11-13 06:45:11,717] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:45:11,717] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:49:46,129] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:49:46,129] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:49:46,129] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:49:46,129] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:49:46,129] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:49:46,129] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:49:50,140] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 77333
+[2024-11-13 06:49:50,141] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:49:50,141] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:49:50,142] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 77333
+[2024-11-13 06:49:50,142] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:49:50,142] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:49:50,143] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 77333
+[2024-11-13 06:49:50,143] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:49:50,143] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:54:23,511] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:54:23,511] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:54:23,511] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:54:23,511] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:54:23,511] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:54:23,511] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:54:42,948] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 78402
+[2024-11-13 06:54:42,948] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:54:42,948] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:54:42,949] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 78402
+[2024-11-13 06:54:42,949] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:54:42,949] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:54:42,950] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 78402
+[2024-11-13 06:54:42,950] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:54:42,950] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:59:21,816] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:59:21,816] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:59:21,817] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:59:21,817] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:59:21,818] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 06:59:21,818] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 06:59:41,715] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 79476
+[2024-11-13 06:59:41,715] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:59:41,715] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:59:41,715] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 79476
+[2024-11-13 06:59:41,716] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:59:41,716] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 06:59:41,716] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 79476
+[2024-11-13 06:59:41,716] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 06:59:41,716] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:04:19,894] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:04:19,895] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:04:19,894] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:04:19,895] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:04:19,898] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:04:19,898] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:04:47,513] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 80577
+[2024-11-13 07:04:47,513] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:04:47,513] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:04:47,513] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 80577
+[2024-11-13 07:04:47,513] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:04:47,513] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:04:47,514] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 80577
+[2024-11-13 07:04:47,514] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:04:47,514] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:09:21,050] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:09:21,051] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:09:21,051] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:09:21,051] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:09:21,051] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:09:21,051] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:09:31,350] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 81615
+[2024-11-13 07:09:31,350] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:09:31,350] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:09:31,351] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 81615
+[2024-11-13 07:09:31,351] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:09:31,351] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:09:31,351] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 81615
+[2024-11-13 07:09:31,351] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:09:31,351] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:14:18,095] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:14:18,095] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:14:18,096] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:14:18,096] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:14:18,097] [INFO] [unfused_optimizer.py:290:_update_scale] No Grad overflow for 1000 iterations
+[2024-11-13 07:14:18,097] [INFO] [unfused_optimizer.py:291:_update_scale] Increasing dynamic loss scale from 2048.0 to 4096.0
+[2024-11-13 07:14:28,045] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 82652
+[2024-11-13 07:14:28,045] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:14:28,045] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:14:28,046] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 82652
+[2024-11-13 07:14:28,046] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:14:28,046] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-11-13 07:14:28,047] [INFO] [unfused_optimizer.py:282:_update_scale] Grad overflow on iteration: 82652
+[2024-11-13 07:14:28,047] [INFO] [unfused_optimizer.py:283:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-11-13 07:14:28,047] [INFO] [unfused_optimizer.py:208:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
