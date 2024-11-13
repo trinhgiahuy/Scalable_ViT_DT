@@ -23,8 +23,8 @@ def parse_args():
     #Add these arguments in entry_cn.sh file
     #?: Not sure but DeepSpeed does not use batch_size but use train_batch_size its own
     parser.add_argument('--batch_size', type=int, default=1, help='Input batch size per GPU')
-    parser.add_argument('--epochs', type=int, default=5, help='Number of epochs to train')
-    parser.add_argument('--dataset_percentage', type=float, default=0.1, help='Percentage of CIFAR-10 dataset to use')
+    parser.add_argument('--epochs', type=int, default=10, help='Number of epochs to train')
+    parser.add_argument('--dataset_percentage', type=float, default=1, help='Percentage of CIFAR-10 dataset to use')
     parser.add_argument('--data_path', type=str, default='./data', help='Path to the dataset')
 
     #TODO: Read docs again about DeepSpeed offered params to avoid conflict with use defined vars
@@ -49,7 +49,7 @@ def setup_distributed():
     return local_rank, rank, world_size
 
 # Log GPU metrics once per epoch
-def log_metrics_once_per_epoch(rank, local_rank, epoch, computation_time, logfile='metrics.csv'):
+def log_metrics_once_per_epoch(rank, local_rank, epoch, computation_time, logfile):
     # Define the header and check if the file already exists
     header = [
         "Timestamp", "Rank", "Epoch", "Computation_Time", "GPU_ID", "GPU_Name",
@@ -81,7 +81,7 @@ def log_metrics_once_per_epoch(rank, local_rank, epoch, computation_time, logfil
 #TODO: This function require more detail of benchmarking metrics record(communication, overhead, dataload, imbalance, ...?)
 #TODO: This function setup the rank is not corrects, 
 # Find a way to configur the rank is not corresponding to 
-def setup_logging(rank):
+def setup_logging(save_dir,rank):
     """
     rank here corresponding to MPI processes' rank (not GPU rank)
     """
@@ -89,7 +89,7 @@ def setup_logging(rank):
     logger.setLevel(logging.INFO)
 
     # Create file handler which logs messages
-    fh = logging.FileHandler(f'vit_training_rank_{rank}.log')
+    fh = logging.FileHandler(f"{save_dir}/vit_training_rank_{rank}.log")
     fh.setLevel(logging.INFO)
 
     # Format log messages to include rank
@@ -145,7 +145,16 @@ def calculate_accuracy(outputs, labels):
     accuracy = correct.sum() / len(correct)
     return accuracy.item()
 
-def train(args, model_engine, data_loader, criterion, logger, rank, local_rank):
+def train(save_dir, args, model_engine, data_loader, criterion, logger, rank, local_rank):
+    
+    # print(rank)
+    # print(local_rank)
+    # print(args.world_size)
+    
+    #TODO: Create directories based on configuration
+    metrics_save_file=f"metrics.csv"
+    metrics_save_file=os.path.join(save_dir ,metrics_save_file)
+
     model_engine.train()
     total_steps = len(data_loader)
     for epoch in range(args.epochs):
@@ -156,7 +165,8 @@ def train(args, model_engine, data_loader, criterion, logger, rank, local_rank):
 
         with tqdm(total=total_steps, desc=f"Epoch {epoch+1}/{args.epochs}", unit="batch") as pbar:
             for batch_idx, (inputs, labels) in enumerate(data_loader):
-
+                
+                # Half precision in case of homogeneous training
                 inputs = inputs.to(args.local_rank, non_blocking=True).half()
                 labels = labels.to(args.local_rank, non_blocking=True)
 
@@ -183,7 +193,7 @@ def train(args, model_engine, data_loader, criterion, logger, rank, local_rank):
         logger.info(f"Epoch [{epoch+1}/{args.epochs}] - Loss: {epoch_loss:.4f}, Accuracy: {epoch_accuracy:.4f}")
         logger.info(f"Epoch [{epoch+1}/{args.epochs}] completed in {epoch_time:.2f} seconds")
     
-        log_metrics_once_per_epoch(rank, local_rank, epoch + 1, epoch_time, 'metrics.csv')
+        log_metrics_once_per_epoch(rank, local_rank, epoch + 1, epoch_time, metrics_save_file)
 
         torch.cuda.empty_cache()
 
@@ -194,7 +204,26 @@ def main():
     args.rank = rank
     args.world_size = world_size
 
-    logger = setup_logging(rank)
+    if world_size == 1:
+        save_dir = f"{os.getcwd()}/log/{world_size}_GPU"
+    else:
+        save_dir = f"{os.getcwd()}/log/{world_size}_GPUs"
+
+    save_dir=f"{save_dir}/p{args.dataset_percentage}_b{args.batch_size}_e{args.epochs}"
+    print(save_dir)
+
+    if rank == 0:
+        if not os.path.exists(save_dir):
+            print("Path {save_dir} not exist. Creating..")
+            os.makedirs(save_dir, exist_ok=True)
+        dist.barrier() 
+    else:
+        dist.barrier()  
+        if not os.path.exists(save_dir):
+            print("Path {save_dir} not exist. Creating..")
+            os.makedirs(save_dir, exist_ok=True)
+
+    logger = setup_logging(save_dir=save_dir,rank=rank)
     # logger.info(f"Starting training on Rank: {rank}, Local Rank: {local_rank}, World Size: {world_size}")
 
     model = create_model()
@@ -216,7 +245,7 @@ def main():
     criterion = nn.CrossEntropyLoss().to(local_rank)
 
     # Start training
-    train(args, model_engine, data_loader, criterion, logger, rank, local_rank)
+    train(save_dir, args, model_engine, data_loader, criterion, logger, rank, local_rank)
 
     # logger.info(f"Training completed on Rank: {rank}")
 
