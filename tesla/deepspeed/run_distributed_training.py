@@ -9,7 +9,12 @@ import torch.optim as optim
 import logging
 import argparse
 import deepspeed
+import GPUtil
+from tqdm import tqdm
 
+#TODO: The script should parse the argument and create a new directory into log directory,
+#directory contain the configuration
+#
 def parse_args():
     parser = argparse.ArgumentParser(description="Distributed ViT Training with DeepSpeed")
     
@@ -43,8 +48,43 @@ def setup_distributed():
 
     return local_rank, rank, world_size
 
+# Log GPU metrics once per epoch
+def log_metrics_once_per_epoch(rank, local_rank, epoch, computation_time, logfile='metrics.csv'):
+    # Define the header and check if the file already exists
+    header = [
+        "Timestamp", "Rank", "Epoch", "Computation_Time", "GPU_ID", "GPU_Name",
+        "GPU_Load", "GPU_Free_Mem_MB", "GPU_Used_Mem_MB", "GPU_Total_Mem_MB", "GPU_Temp_C"
+    ]
+    
+    # Write the header if the file doesn't exist
+    file_exists = os.path.isfile(logfile)
+    if not file_exists:
+        with open(logfile, 'w') as f:
+            f.write(",".join(header) + "\n")
+    
+    # Get GPU metrics
+    gpus = GPUtil.getGPUs()
+    timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+    
+    # Log metrics for each GPU
+    for gpu in gpus:
+        gpu_info = [
+            timestamp, rank, epoch, computation_time, gpu.id, gpu.name, 
+            f"{gpu.load*100:.1f}%", f"{gpu.memoryFree:.1f}", f"{gpu.memoryUsed:.1f}",
+            f"{gpu.memoryTotal:.1f}", f"{gpu.temperature}"
+        ]
+        
+        # Write data row to the CSV file
+        with open(logfile, 'a') as f:
+            f.write(",".join(map(str, gpu_info)) + "\n")
+
 #TODO: This function require more detail of benchmarking metrics record(communication, overhead, dataload, imbalance, ...?)
+#TODO: This function setup the rank is not corrects, 
+# Find a way to configur the rank is not corresponding to 
 def setup_logging(rank):
+    """
+    rank here corresponding to MPI processes' rank (not GPU rank)
+    """
     logger = logging.getLogger(f'Rank_{rank}')
     logger.setLevel(logging.INFO)
 
@@ -98,28 +138,52 @@ def get_data_loader(args):
     data_loader = DataLoader(subset_dataset, batch_size=args.batch_size, sampler=sampler, num_workers=2, pin_memory=True)
     return data_loader
 
-def train(args, model_engine, data_loader, criterion, logger):
+def calculate_accuracy(outputs, labels):
+    """Calculates accuracy for each class."""
+    _, preds = torch.max(outputs, 1)
+    correct = (preds == labels).float()
+    accuracy = correct.sum() / len(correct)
+    return accuracy.item()
+
+def train(args, model_engine, data_loader, criterion, logger, rank, local_rank):
     model_engine.train()
     total_steps = len(data_loader)
     for epoch in range(args.epochs):
         data_loader.sampler.set_epoch(epoch)  # Shuffle data for each epoch
         epoch_start_time = time.time()
-        
-        for batch_idx, (inputs, labels) in enumerate(data_loader):
-            inputs = inputs.to(args.local_rank, non_blocking=True).half()
-            labels = labels.to(args.local_rank, non_blocking=True)
+        running_loss = 0.0
+        running_accuracy = 0.0
 
-            outputs = model_engine(inputs)
-            loss = criterion(outputs, labels)
+        with tqdm(total=total_steps, desc=f"Epoch {epoch+1}/{args.epochs}", unit="batch") as pbar:
+            for batch_idx, (inputs, labels) in enumerate(data_loader):
 
-            model_engine.backward(loss)
-            model_engine.step()
+                inputs = inputs.to(args.local_rank, non_blocking=True).half()
+                labels = labels.to(args.local_rank, non_blocking=True)
 
-            if batch_idx % 10 == 0:
-                logger.info(f"Epoch [{epoch+1}/{args.epochs}], Step [{batch_idx+1}/{total_steps}], Loss: {loss.item():.4f}")
+                outputs = model_engine(inputs)
+                loss = criterion(outputs, labels)
 
+                model_engine.backward(loss)
+                model_engine.step()
+
+                running_loss += loss.item()
+                running_accuracy += calculate_accuracy(outputs, labels)
+
+                # if batch_idx % 10 == 0:
+                #     logger.info(f"Epoch [{epoch+1}/{args.epochs}], Step [{batch_idx+1}/{total_steps}], Loss: {loss.item():.4f}")
+                
+                pbar.update(1)
+                pbar.set_postfix({"loss": loss.item(), "accuracy": running_accuracy / (batch_idx + 1)})
+
+        epoch_loss = running_loss / total_steps
+        epoch_accuracy = running_accuracy / total_steps
         epoch_time = time.time() - epoch_start_time
+
+        # Log the metrics
+        logger.info(f"Epoch [{epoch+1}/{args.epochs}] - Loss: {epoch_loss:.4f}, Accuracy: {epoch_accuracy:.4f}")
         logger.info(f"Epoch [{epoch+1}/{args.epochs}] completed in {epoch_time:.2f} seconds")
+    
+        log_metrics_once_per_epoch(rank, local_rank, epoch + 1, epoch_time, 'metrics.csv')
 
         torch.cuda.empty_cache()
 
@@ -131,7 +195,7 @@ def main():
     args.world_size = world_size
 
     logger = setup_logging(rank)
-    logger.info(f"Starting training on Rank: {rank}, Local Rank: {local_rank}, World Size: {world_size}")
+    # logger.info(f"Starting training on Rank: {rank}, Local Rank: {local_rank}, World Size: {world_size}")
 
     model = create_model()
     
@@ -152,9 +216,9 @@ def main():
     criterion = nn.CrossEntropyLoss().to(local_rank)
 
     # Start training
-    train(args, model_engine, data_loader, criterion, logger)
+    train(args, model_engine, data_loader, criterion, logger, rank, local_rank)
 
-    logger.info(f"Training completed on Rank: {rank}")
+    # logger.info(f"Training completed on Rank: {rank}")
 
     # Clean up the distributed process group
     dist.destroy_process_group()
