@@ -11,13 +11,14 @@ import argparse
 import deepspeed
 import GPUtil
 from tqdm import tqdm
+import datetime
 
 #TODO: The script should parse the argument and create a new directory into log directory,
 #directory contain the configuration
 #
 def parse_args():
     parser = argparse.ArgumentParser(description="Distributed ViT Training with DeepSpeed")
-    
+
     # Training parameters
     #TODO: Add more later on
     #Add these arguments in entry_cn.sh file
@@ -36,15 +37,18 @@ def parse_args():
 
 #TODO: Check this why in each local rank log has 5 lines (expecte 1 line for each? Check Nebula log file again)
 def setup_distributed():
-    # Initialize the distributed process group
+
+    # Set a unique port for the distributed setup
+    os.environ["MASTER_ADDR"] = "129.97.92.169"  # Change to your master node address
+    os.environ["MASTER_PORT"] = "29501"  # Ensure this port is unique and not in use
+
+    # Initialize the distributed process group with timeout
     deepspeed.init_distributed()
 
-    # Retrieve local rank and other environment variables
-    local_rank = int(os.environ['LOCAL_RANK'])
+    local_rank = int(os.environ["LOCAL_RANK"])
     torch.cuda.set_device(local_rank)
-
-    rank = int(os.environ['RANK'])
-    world_size = int(os.environ['WORLD_SIZE'])
+    rank = int(os.environ["RANK"])
+    world_size = int(os.environ["WORLD_SIZE"])
 
     return local_rank, rank, world_size
 
@@ -55,32 +59,32 @@ def log_metrics_once_per_epoch(rank, local_rank, epoch, computation_time, logfil
         "Timestamp", "Rank", "Epoch", "Computation_Time", "GPU_ID", "GPU_Name",
         "GPU_Load", "GPU_Free_Mem_MB", "GPU_Used_Mem_MB", "GPU_Total_Mem_MB", "GPU_Temp_C"
     ]
-    
+
     # Write the header if the file doesn't exist
     file_exists = os.path.isfile(logfile)
     if not file_exists:
         with open(logfile, 'w') as f:
             f.write(",".join(header) + "\n")
-    
+
     # Get GPU metrics
     gpus = GPUtil.getGPUs()
     timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
-    
+
     # Log metrics for each GPU
     for gpu in gpus:
         gpu_info = [
-            timestamp, rank, epoch, computation_time, gpu.id, gpu.name, 
+            timestamp, rank, epoch, computation_time, gpu.id, gpu.name,
             f"{gpu.load*100:.1f}%", f"{gpu.memoryFree:.1f}", f"{gpu.memoryUsed:.1f}",
             f"{gpu.memoryTotal:.1f}", f"{gpu.temperature}"
         ]
-        
+
         # Write data row to the CSV file
         with open(logfile, 'a') as f:
             f.write(",".join(map(str, gpu_info)) + "\n")
 
 #TODO: This function require more detail of benchmarking metrics record(communication, overhead, dataload, imbalance, ...?)
-#TODO: This function setup the rank is not corrects, 
-# Find a way to configur the rank is not corresponding to 
+#TODO: This function setup the rank is not corrects,
+# Find a way to configur the rank is not corresponding to
 def setup_logging(save_dir,rank):
     """
     rank here corresponding to MPI processes' rank (not GPU rank)
@@ -106,7 +110,7 @@ def setup_logging(save_dir,rank):
     return logger
 
 def create_model():
-    model = models.vit_b_16(weights=None) 
+    model = models.vit_b_16(weights=None)
     return model
 
 def get_data_loader(args):
@@ -121,9 +125,9 @@ def get_data_loader(args):
     # Download dataset on rank 0 and synchronize other as Nebula code
     if args.rank == 0:
         dataset = datasets.CIFAR10(root=args.data_path, train=True, download=True, transform=transform)
-        dist.barrier() 
+        dist.barrier()
     else:
-        dist.barrier()  
+        dist.barrier()
         dataset = datasets.CIFAR10(root=args.data_path, train=True, download=False, transform=transform)
 
     # Subset of dataset to experiment with dataset_percentage
@@ -146,11 +150,11 @@ def calculate_accuracy(outputs, labels):
     return accuracy.item()
 
 def train(save_dir, args, model_engine, data_loader, criterion, logger, rank, local_rank):
-    
+
     # print(rank)
     # print(local_rank)
     # print(args.world_size)
-    
+
     #TODO: Create directories based on configuration
     metrics_save_file=f"metrics.csv"
     metrics_save_file=os.path.join(save_dir ,metrics_save_file)
@@ -165,7 +169,7 @@ def train(save_dir, args, model_engine, data_loader, criterion, logger, rank, lo
 
         with tqdm(total=total_steps, desc=f"Epoch {epoch+1}/{args.epochs}", unit="batch") as pbar:
             for batch_idx, (inputs, labels) in enumerate(data_loader):
-                
+
                 # Half precision in case of homogeneous training
                 inputs = inputs.to(args.local_rank, non_blocking=True).half()
                 labels = labels.to(args.local_rank, non_blocking=True)
@@ -181,7 +185,7 @@ def train(save_dir, args, model_engine, data_loader, criterion, logger, rank, lo
 
                 # if batch_idx % 10 == 0:
                 #     logger.info(f"Epoch [{epoch+1}/{args.epochs}], Step [{batch_idx+1}/{total_steps}], Loss: {loss.item():.4f}")
-                
+
                 pbar.update(1)
                 pbar.set_postfix({"loss": loss.item(), "accuracy": running_accuracy / (batch_idx + 1)})
 
@@ -192,7 +196,7 @@ def train(save_dir, args, model_engine, data_loader, criterion, logger, rank, lo
         # Log the metrics
         logger.info(f"Epoch [{epoch+1}/{args.epochs}] - Loss: {epoch_loss:.4f}, Accuracy: {epoch_accuracy:.4f}")
         logger.info(f"Epoch [{epoch+1}/{args.epochs}] completed in {epoch_time:.2f} seconds")
-    
+
         log_metrics_once_per_epoch(rank, local_rank, epoch + 1, epoch_time, metrics_save_file)
 
         torch.cuda.empty_cache()
@@ -216,18 +220,19 @@ def main():
         if not os.path.exists(save_dir):
             print("Path {save_dir} not exist. Creating..")
             os.makedirs(save_dir, exist_ok=True)
-        dist.barrier() 
-    else:
-        dist.barrier()  
-        if not os.path.exists(save_dir):
-            print("Path {save_dir} not exist. Creating..")
-            os.makedirs(save_dir, exist_ok=True)
+    
+    dist.barrier()
+    # else:
+    #     dist.barrier()
+    #    if not os.path.exists(save_dir):
+    #        print("Path {save_dir} not exist. Creating..")
+    #        os.makedirs(save_dir, exist_ok=True)
 
     logger = setup_logging(save_dir=save_dir,rank=rank)
     # logger.info(f"Starting training on Rank: {rank}, Local Rank: {local_rank}, World Size: {world_size}")
 
     model = create_model()
-    
+
     optimizer = optim.AdamW(model.parameters(), lr=1e-4)
 
     # Initialize DeepSpeed with the specified configuration file

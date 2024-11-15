@@ -1,0 +1,2 @@
+ecetesla1 slots=1
+ecetesla2 slots=1
