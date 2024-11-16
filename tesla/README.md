@@ -1,4 +1,4 @@
-## ECE Tesla Machine Distributed Training (Inter-Node)
+# ECE Tesla Machine Distributed Training (Inter-Node)
 
 This directory includes code of distributed training on Tesla machine (inter-node).
 
@@ -159,12 +159,10 @@ This happens because the loss scale is too high, resulting in values that exceed
 
  ```sh
  [rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 20.75 MiB is free. Process 3441597 has 2.54 GiB memory in use. Process 2618016 has 274.00 MiB memory in use. Process 2618019 has 274.00 MiB memory in use. Process 2618020 has 274.00 MiB memory in use. Including non-PyTorch memory, this process has 4.41 GiB memory in use. Of the allocated memory 3.90 GiB is allocated by PyTorch, and 220.70 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-
+```
 
 TODO
 ====
-
-### Deepspeed
 
 - [x] Initialize deepspeed and test it with dummy distributed matrix multiplcation on 5 machines (deepspeed/test_deepspeed_2.py)
 
@@ -172,14 +170,23 @@ TODO
 
 - [x] Write Python script to plot/virtualize from this log
 
-- [ ] Adapt the distributed training script
+- [x] Adapt the distributed training script into training Vision Transformer
 
-### Torch distributed
+- Strong Scaling (Huy)
 
-- [ ] Create torch distributed and run on 5 different machines to benchmarking the performance (baseline_measure.py)
+We keep the training size fixed (a whole training set of 50 000 images), we just increase the number of GPUs
 
-- [ ] Update the pipeline to record these metrics
+- [ ] p1_b32_e10 - 1 GPU
+- [ ] p1_b32_e10 - 2 GPUs
+- [x] p1_b32_e10 - 3 GPUs
+- [ ] p1_b32_e10 - 4 GPUs 
+- [ ] p1_b32_e10 - 5 GPUs
 
-- [ ] Write Python script to plot/virtualize from this log
+- Weak Scaling (Jack)
+We start with 10% of training set and increase into 50%, propotionally to number of GPU. But then how about the batch size per GPU, do we to configure this to make sure the total number of images received by each GPU are same when scaling?
 
-- [ ] Adapt the distributed training script
+- [ ] p0.1_b32_e10 - 1 GPU
+- [ ] p0.2_b32_e10 - 2 GPUs
+- [ ] p0.3_b32_e10 - 3 GPUs
+- [ ] p0.4_b32_e10 - 4 GPUs
+- [ ] p0.5_b32_e10 - 5 GPUs
