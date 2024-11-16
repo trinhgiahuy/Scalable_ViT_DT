@@ -3,8 +3,8 @@
 This directory includes code of distributed training on Tesla machine (inter-node).
 
 
-SETUP
-=====
+SETUP PASSWORLESS SSH
+=====================
 
 Set up passwordless SSH on 5 Tesla machines (ecetesla[0-4]). Default machines use `/bin/tsch` SHELL. First, change `WATID` to your watid and `NEWSHELL` to zsh. Then run
 
@@ -26,6 +26,9 @@ You can also check their hostname, for example by this command
 ssh ecetesla0 hostname
 ```
 
+TEST MPI
+========
+
 Put these hostnames into `setup/hosts.txt` and compile the first MPI simple hello world program on these 5 machines by
 
 ```sh
@@ -38,9 +41,18 @@ Finally, we test OpenMPI by running
 mpirun -np 5 --hostfile setup/hosts.txt .setup/hello_mpi
 ```
 
+INSTALL ENVIRONMENT
+===================
+
 (Optional) Configure the .zshrc for more effective
 
-We may use pip virtual environment and install `deepspeed`, `torch` (support CUDA 12.2 although nvidia-smi show CUDA Driver 12.4, otherwise error of pytorch is not compatible with RTX 3070's CUDA capability sm_86)
+We may use pip virtual environment and install `deepspeed`, `torch` (support CUDA 12.2 although nvidia-smi show CUDA Driver 12.4, otherwise error of pytorch is not compatible with RTX 3070's CUDA capability sm_86). In addition, from [torch document](https://pytorch.org/get-started/locally/), we need to install pytorch supporting CUDA 12.1. Instruction to install can be found from [this](https://www.deepspeed.ai/getting-started/#multi-node-environment-variables).  
+
+```sh
+DS_BUILD_OPS=1 DS_BUILD_AIO=0 DS_BUILD_KERNELS=1 DS_BUILD_MPU=1 DS_BUILD_MII=0 pip install deepspeed
+``` 
+
+But from our experiment, `pip install deepspeed` should work since DeepSpeed will automatically look for MPI support, we just need to install `mpi4py`.
 
 Native Nebula python (/usr/bin/python) (version 3.8.10) does not support python3-venv, we need to install non-pip virtual environment first, and manually install pip later
 
@@ -63,22 +75,23 @@ Verify pip version
 pip --version
 ```
 
-From [torch document](https://pytorch.org/get-started/locally/), install pytorch supporting CUDA 12.1 through
+Then install necessary packages
 
+```sh
+python -m pip install -r requirement.txt
 ```
-python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+Make sure python is from your new virtual environment.
+
+```sh
+which python
+# /home/[YOUR_WATID]/vit_env/bin/python
 ```
 
 Verify torch is working with all machines by addding `python3 /home/$WATID/Scalable_ViT_DT/tesla/script/test_torch_gpu.py` into entry script `entry_cn.sh`. This script will be run distributed using this command
 
 ```sh
 mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh [YOUR_WATID]
-```
-
-Install necessary packages/libs through
-
-```sh
-python3 -m pip install -r requirement.txt
 ```
 
 USING DEEPSPEED
@@ -90,12 +103,6 @@ Create a `.deepspeed_env` file with the necessary environment variables. This fi
 echo "NCCL_IB_DISABLE=1" > ~/.deepspeed_env
 echo "NCCL_SOCKET_IFNAME=^docker,lo" >> ~/.deepspeed_env
 ```
-
-Install Deepspeed with MPI support using this command. And this can be found from [this](https://www.deepspeed.ai/getting-started/#multi-node-environment-variables)
-
-```sh
-DS_BUILD_OPS=1 DS_BUILD_AIO=0 DS_BUILD_KERNELS=1 DS_BUILD_MPU=1 DS_BUILD_MII=0 pip install deepspeed
-``` 
 
 Then run Deepspeed test with (enable `#TEST Deepspeed` option in ./entry_cn.sh)
 
