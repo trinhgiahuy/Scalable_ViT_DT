@@ -140,6 +140,20 @@ Default enable of FP16, its dynamic loss scaling will encounter numerical instab
 This happens because the loss scale is too high, resulting in values that exceed the representable range in FP16. We reduce the initial loss scale to avoid the dynamic scaler from starting too high by setting `"initial_scale_power": 10` and lower it if needed.
  
 
+ This configuration (for 3GPUs)
+
+ ```json
+"train_batch_size": 192,
+"gradient_accumulation_steps": 1,
+"micro_batch_per_gpu": 64,
+ ```
+ 
+ will result in OOM error
+
+ ```sh
+ [rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 20.75 MiB is free. Process 3441597 has 2.54 GiB memory in use. Process 2618016 has 274.00 MiB memory in use. Process 2618019 has 274.00 MiB memory in use. Process 2618020 has 274.00 MiB memory in use. Including non-PyTorch memory, this process has 4.41 GiB memory in use. Of the allocated memory 3.90 GiB is allocated by PyTorch, and 220.70 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+
 TODO
 ====
 
