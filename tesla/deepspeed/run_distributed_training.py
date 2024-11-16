@@ -23,7 +23,6 @@ def parse_args():
     #TODO: Add more later on
     #Add these arguments in entry_cn.sh file
     #?: Not sure but DeepSpeed does not use batch_size but use train_batch_size its own
-    parser.add_argument('--batch_size', type=int, default=1, help='Input batch size per GPU')
     parser.add_argument('--epochs', type=int, default=10, help='Number of epochs to train')
     parser.add_argument('--dataset_percentage', type=float, default=1, help='Percentage of CIFAR-10 dataset to use')
     parser.add_argument('--data_path', type=str, default='./data', help='Path to the dataset')
@@ -139,7 +138,7 @@ def get_data_loader(args):
     #TODO: Research here on imbalance (in case of non-homogenous)
     sampler = DistributedSampler(subset_dataset, shuffle=True)
 
-    data_loader = DataLoader(subset_dataset, batch_size=args.batch_size, sampler=sampler, num_workers=2, pin_memory=True)
+    data_loader = DataLoader(subset_dataset, batch_size=args.micro_batch_size_per_gpu, sampler=sampler, num_workers=2, pin_memory=True)
     return data_loader
 
 def calculate_accuracy(outputs, labels):
@@ -208,27 +207,6 @@ def main():
     args.rank = rank
     args.world_size = world_size
 
-    if world_size == 1:
-        save_dir = f"{os.getcwd()}/log/{world_size}_GPU"
-    else:
-        save_dir = f"{os.getcwd()}/log/{world_size}_GPUs"
-
-    save_dir=f"{save_dir}/p{args.dataset_percentage}_b{args.batch_size}_e{args.epochs}"
-    print(save_dir)
-
-    if rank == 0:
-        if not os.path.exists(save_dir):
-            print("Path {save_dir} not exist. Creating..")
-            os.makedirs(save_dir, exist_ok=True)
-    
-    dist.barrier()
-    # else:
-    #     dist.barrier()
-    #    if not os.path.exists(save_dir):
-    #        print("Path {save_dir} not exist. Creating..")
-    #        os.makedirs(save_dir, exist_ok=True)
-
-    logger = setup_logging(save_dir=save_dir,rank=rank)
     # logger.info(f"Starting training on Rank: {rank}, Local Rank: {local_rank}, World Size: {world_size}")
 
     model = create_model()
@@ -242,6 +220,27 @@ def main():
         optimizer=optimizer,
         model_parameters=model.parameters()
     )
+
+    args.micro_batch_size_per_gpu = model_engine.train_micro_batch_size_per_gpu()
+    print(f"model_engine.train_micro_batch_size_per_gpu(): {model_engine.train_micro_batch_size_per_gpu()}")
+    # print(f"args.micro_batch_size_per_gpu : {args.micro_batch_size_per_gpu}")
+
+    if world_size == 1:
+        save_dir = f"{os.getcwd()}/log/{world_size}_GPU"
+    else:
+        save_dir = f"{os.getcwd()}/log/{world_size}_GPUs"
+
+    save_dir=f"{save_dir}/p{args.dataset_percentage}_b{args.micro_batch_size_per_gpu}_e{args.epochs}"
+    print(save_dir)
+
+    if rank == 0:
+        if not os.path.exists(save_dir):
+            print("Path {save_dir} not exist. Creating..")
+            os.makedirs(save_dir, exist_ok=True)
+    
+    dist.barrier()
+
+    logger = setup_logging(save_dir=save_dir,rank=rank)
 
     # Set up DataLoader for distributed training
     data_loader = get_data_loader(args)
