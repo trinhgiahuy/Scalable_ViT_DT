@@ -64,4 +64,4 @@ source /home/$WATID/vit_env/bin/activate
 # python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/test_deepspeed_2.py
 
 #TEST test distributed training
-python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/run_distributed_training.py --deepspeed_config "deepspeed_config.json" --batch_size 1
+python3 /home/$WATID/Scalable_ViT_DT/tesla/deepspeed/run_distributed_training.py --deepspeed_config "deepspeed_config.json"

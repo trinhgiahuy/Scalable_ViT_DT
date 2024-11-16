@@ -1,9 +1,25 @@
 {
-    "train_batch_size": 3,
+    "train_batch_size": 96,
     "gradient_accumulation_steps": 1,
-    "micro_batch_per_gpu": 1,
+    "micro_batch_per_gpu": 32,
     "fp16": {
       "enabled": true,
-      "initial_scale_power": 10
-    }
-  }
+      "dynamic_loss_scale": true,
+      "initial_scale_power": 8
+    },
+    "zero_optimization": {
+      "stage": 0,
+      "offload_optimizer": {
+          "device": "none"
+      },
+      "offload_param": {
+          "device": "none"
+      }
+  },
+  "wall_clock_breakdown": true,
+  "prescale_gradients": false,
+  "pipeline": {
+      "pipe_partitioned": false
+  },
+  "pin_memory": true
+}
