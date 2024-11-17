@@ -169,8 +169,11 @@ def train(save_dir, args, model_engine, data_loader, criterion, logger, rank, lo
         with tqdm(total=total_steps, desc=f"Epoch {epoch+1}/{args.epochs}", unit="batch") as pbar:
             for batch_idx, (inputs, labels) in enumerate(data_loader):
 
-                # Half precision in case of homogeneous training
-                inputs = inputs.to(args.local_rank, non_blocking=True).half()
+                # Half precision in case of homogeneous training ony (enable this fp16 training)
+                # inputs = inputs.to(args.local_rank, non_blocking=True).half()
+
+                # This is for all 5 GPUs training
+                inputs = inputs.to(args.local_rank, non_blocking=True)
                 labels = labels.to(args.local_rank, non_blocking=True)
 
                 outputs = model_engine(inputs)
@@ -237,7 +240,7 @@ def main():
         if not os.path.exists(save_dir):
             print("Path {save_dir} not exist. Creating..")
             os.makedirs(save_dir, exist_ok=True)
-    
+
     dist.barrier()
 
     logger = setup_logging(save_dir=save_dir,rank=rank)

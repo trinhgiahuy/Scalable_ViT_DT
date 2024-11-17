@@ -1,11 +1,9 @@
 {
-    "train_batch_size": 96,
+    "train_batch_size": 80,
     "gradient_accumulation_steps": 1,
-    "micro_batch_per_gpu": 32,
+    "micro_batch_per_gpu": 16,
     "fp16": {
-      "enabled": true,
-      "dynamic_loss_scale": true,
-      "initial_scale_power": 8
+      "enabled": false,
     },
     "zero_optimization": {
       "stage": 0,
