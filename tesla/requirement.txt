@@ -1,3 +1,7 @@
+torch+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
+torchvision+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
+torchaudio+cu121 --extra-index-url https://download.pytorch.org/whl/cu121
+deepspeed
 psutil
 mpi4py
 gputil

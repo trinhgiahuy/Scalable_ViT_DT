@@ -1,0 +1,26 @@
+...
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl                                  [112/1850]
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/deepspeed/utils/nvtx.py", line 18, in wrapped_fn
+[rank4]:     ret_val = func(*args, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/deepspeed/runtime/engine.py", line 1899, in forward
+[rank4]:     loss = self.module(*inputs, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 291, in forward
+[rank4]:     x = self._process_input(x)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torchvision/models/vision_transformer.py", line 277, in _process_input
+[rank4]:     x = self.conv_proj(x)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 458, in forward
+[rank4]:     return self._conv_forward(input, self.weight, self.bias)
+[rank4]:   File "/home/h3trinh/vit_env/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 454, in _conv_forward
+[rank4]:     return F.conv2d(input, weight, bias, self.stride,
+[rank4]: RuntimeError: Input type (c10::Half) and bias type (float) should be the same

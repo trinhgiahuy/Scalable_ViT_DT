@@ -1,0 +1,32 @@
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+NCCL Debugging is disabled.
+[2024-11-11 00:23:12,165] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-11 00:23:12,489] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-11 00:23:16,258] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-11 00:23:16,258] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-11 00:23:17,234] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-11 00:23:17,234] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-11 00:23:18,042] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-11 00:23:18,085] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2024-11-11 00:23:18,148] [INFO] [real_accelerator.py:219:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+Warning: The cache directory for DeepSpeed Triton autotune, /home/h3trinh/.triton/autotune, appears to be on an NFS system. While this is generally acceptable, if you experience slowdowns or hanging when DeepSpeed exits, it is recommended to set the TRITON_CACHE_DIR environment variable to a non-NFS path.
+[2024-11-11 00:23:21,604] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-11 00:23:21,604] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-11 00:23:21,882] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-11 00:23:21,883] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-11 00:23:22,105] [INFO] [comm.py:652:init_distributed] cdb=None
+[2024-11-11 00:23:22,105] [INFO] [comm.py:667:init_distributed] Not using the DeepSpeed or dist launchers, attempting to detect MPI environment...
+[2024-11-11 00:23:22,495] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=2, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-11 00:23:22,495] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=4, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-11 00:23:22,492] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=3, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-11 00:23:22,495] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=1, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-11 00:23:22,495] [INFO] [comm.py:718:mpi_discovery] Discovered MPI settings of world_rank=0, local_rank=0, world_size=5, master_addr=129.97.92.168, master_port=29500
+[2024-11-11 00:23:22,496] [INFO] [comm.py:683:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[2024-11-11 00:23:26,105] [INFO] [logging.py:129:log_dist] [Rank 0] DeepSpeed info: version=0.15.3, git-hash=unknown, git-branch=unknown

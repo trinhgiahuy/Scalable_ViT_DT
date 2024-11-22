@@ -1,10 +1,10 @@
-## ECE Tesla Machine Distributed Training (Inter-Node)
+# ECE Tesla Machine Distributed Training (Inter-Node)
 
 This directory includes code of distributed training on Tesla machine (inter-node).
 
 
-SETUP
-=====
+SETUP PASSWORLESS SSH
+=====================
 
 Set up passwordless SSH on 5 Tesla machines (ecetesla[0-4]). Default machines use `/bin/tsch` SHELL. First, change `WATID` to your watid and `NEWSHELL` to zsh. Then run
 
@@ -26,6 +26,9 @@ You can also check their hostname, for example by this command
 ssh ecetesla0 hostname
 ```
 
+TEST MPI
+========
+
 Put these hostnames into `setup/hosts.txt` and compile the first MPI simple hello world program on these 5 machines by
 
 ```sh
@@ -38,9 +41,18 @@ Finally, we test OpenMPI by running
 mpirun -np 5 --hostfile setup/hosts.txt .setup/hello_mpi
 ```
 
+INSTALL ENVIRONMENT
+===================
+
 (Optional) Configure the .zshrc for more effective
 
-We may use pip virtual environment and install `deepspeed`, `torch` (support CUDA 12.2 although nvidia-smi show CUDA Driver 12.4, otherwise error of pytorch is not compatible with RTX 3070's CUDA capability sm_86)
+We may use pip virtual environment and install `deepspeed`, `torch` (support CUDA 12.2 although nvidia-smi show CUDA Driver 12.4, otherwise error of pytorch is not compatible with RTX 3070's CUDA capability sm_86). In addition, from [torch document](https://pytorch.org/get-started/locally/), we need to install pytorch supporting CUDA 12.1. Instruction to install can be found from [this](https://www.deepspeed.ai/getting-started/#multi-node-environment-variables).  
+
+```sh
+DS_BUILD_OPS=1 DS_BUILD_AIO=0 DS_BUILD_KERNELS=1 DS_BUILD_MPU=1 DS_BUILD_MII=0 pip install deepspeed
+``` 
+
+But from our experiment, `pip install deepspeed` should work since DeepSpeed will automatically look for MPI support, we just need to install `mpi4py`.
 
 Native Nebula python (/usr/bin/python) (version 3.8.10) does not support python3-venv, we need to install non-pip virtual environment first, and manually install pip later
 
@@ -63,22 +75,23 @@ Verify pip version
 pip --version
 ```
 
-From [torch document](https://pytorch.org/get-started/locally/), install pytorch supporting CUDA 12.1 through
+Then install necessary packages
 
+```sh
+python -m pip install -r requirement.txt
 ```
-python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
+Make sure python is from your new virtual environment.
+
+```sh
+which python
+# /home/[YOUR_WATID]/vit_env/bin/python
 ```
 
 Verify torch is working with all machines by addding `python3 /home/$WATID/Scalable_ViT_DT/tesla/script/test_torch_gpu.py` into entry script `entry_cn.sh`. This script will be run distributed using this command
 
 ```sh
 mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh [YOUR_WATID]
-```
-
-Install necessary packages/libs through
-
-```sh
-python3 -m pip install -r requirement.txt
 ```
 
 USING DEEPSPEED
@@ -91,23 +104,65 @@ echo "NCCL_IB_DISABLE=1" > ~/.deepspeed_env
 echo "NCCL_SOCKET_IFNAME=^docker,lo" >> ~/.deepspeed_env
 ```
 
-Install Deepspeed with MPI support using this command. And this can be found from [this](https://www.deepspeed.ai/getting-started/#multi-node-environment-variables)
-
-```sh
-DS_BUILD_OPS=1 DS_BUILD_AIO=0 DS_BUILD_KERNELS=1 DS_BUILD_MPU=1 DS_BUILD_MII=0 pip install deepspeed
-``` 
-
 Then run Deepspeed test with (enable `#TEST Deepspeed` option in ./entry_cn.sh)
 
 ```sh
 mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh h3trinh > deepspeed/run_test_deepspeed.log
 ```
 
+(THE CODE DID NOT WORK YET) Encounter this error, it seems we should not enable fp16 in DeepSpeed
+
+```json
+      "_comment": "fp16 is not supported in Tesla0 and Tesla3 ValueError: Type fp16 is not supported", 
+      "fp16": {
+        "enabled": false
+      }
+```
+
+We first run homogenous case with 3 GPUs (tesla1,2,4) of RTX 3070 - 8GB using this deepspeed_config.json file
+```json
+{
+    "train_batch_size": 3,
+    "gradient_accumulation_steps": 1,
+    "micro_batch_per_gpu": 1,
+    "fp16": {
+      "enabled": true,
+      "initial_scale_power": 10
+    }
+  }
+```
+
+The `train_batch_size` should be equal to `gradient_accumulation_steps` * `micro_batch_per_gpu` * number of MPI processes running.
+
+Please note the GPU's memory is GPU is 8GB, using large `args.batch_size` would result in this error
+
+```sh
+RuntimeError: CUDA error: CUBLAS_STATUS_ALLOC_FAILED when calling `cublasCreate(handle)
+``` 
+
+Default enable of FP16, its dynamic loss scaling will encounter numerical instability for all every iterations. 
+
+![default_enable_fp16.png](image/default_enable_fp16.png)
+
+This happens because the loss scale is too high, resulting in values that exceed the representable range in FP16. We reduce the initial loss scale to avoid the dynamic scaler from starting too high by setting `"initial_scale_power": 10` and lower it if needed.
+ 
+
+ This configuration (for 3GPUs)
+
+ ```json
+"train_batch_size": 192,
+"gradient_accumulation_steps": 1,
+"micro_batch_per_gpu": 64,
+ ```
+ 
+ will result in OOM error
+
+ ```sh
+ [rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 20.75 MiB is free. Process 3441597 has 2.54 GiB memory in use. Process 2618016 has 274.00 MiB memory in use. Process 2618019 has 274.00 MiB memory in use. Process 2618020 has 274.00 MiB memory in use. Including non-PyTorch memory, this process has 4.41 GiB memory in use. Of the allocated memory 3.90 GiB is allocated by PyTorch, and 220.70 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+```
 
 TODO
 ====
-
-### Deepspeed
 
 - [x] Initialize deepspeed and test it with dummy distributed matrix multiplcation on 5 machines (deepspeed/test_deepspeed_2.py)
 
@@ -115,14 +170,23 @@ TODO
 
 - [x] Write Python script to plot/virtualize from this log
 
-- [ ] Adapt the distributed training script
+- [x] Adapt the distributed training script into training Vision Transformer
 
-### Torch distributed
+- Strong Scaling (Huy)
 
-- [ ] Create torch distributed and run on 5 different machines to benchmarking the performance (baseline_measure.py)
+We keep the training size fixed (a whole training set of 50 000 images), we just increase the number of GPUs
 
-- [ ] Update the pipeline to record these metrics
+- [ ] p1_b32_e10 - 1 GPU
+- [ ] p1_b32_e10 - 2 GPUs
+- [x] p1_b32_e10 - 3 GPUs
+- [ ] p1_b32_e10 - 4 GPUs 
+- [ ] p1_b32_e10 - 5 GPUs
 
-- [ ] Write Python script to plot/virtualize from this log
+- Weak Scaling (Jack)
+We start with 10% of training set and increase into 50%, propotionally to number of GPU. But then how about the batch size per GPU, do we to configure this to make sure the total number of images received by each GPU are same when scaling?
 
-- [ ] Adapt the distributed training script
+- [ ] p0.1_b32_e10 - 1 GPU
+- [ ] p0.2_b32_e10 - 2 GPUs
+- [ ] p0.3_b32_e10 - 3 GPUs
+- [ ] p0.4_b32_e10 - 4 GPUs
+- [ ] p0.5_b32_e10 - 5 GPUs
