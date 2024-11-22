@@ -16,12 +16,26 @@
 #module load modules-u22/1.0 
 #module load module load py-torch/2.4.1-CUDA12.4.0-f3vy 
 
-source /h/h3trinh/ece750/bin/activate 
+# source /h/h3trinh/ece750/bin/activate 
 
-module load pytorch2.1-cuda11.8-python3.9
+source /h/h3trinh/.bashrc
+conda activate /h/h3trinh/condaenvs/vit_env/ 
+#source /h/h3trinh/.bashrc
+#export CUDA_HOME=/pkgs/cuda-11.8
+#export PATH=$CUDA_HOME/bin:$PATH
+#export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+#source /h/h3trinh/.bashrc
+#which nvcc
 
+
+#module load pytorch2.1-cuda11.8-python3.9
+
+#source /h/h3trinh/.bashrc
 # Run the test script
-python3 test_torch_gpu.py
+#which python3
+#which python
+
+python test_torch_gpu.py
 
 nvidia-smi
 
