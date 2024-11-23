@@ -1,0 +1,16 @@
+2024-11-23 01:12:31,575 - Rank 0 - INFO - Epoch [1/5], Step [1/16], Loss: 6.9078
+2024-11-23 01:12:34,338 - Rank 0 - INFO - Epoch [1/5], Step [11/16], Loss: 5.6063
+2024-11-23 01:12:35,695 - Rank 0 - INFO - Epoch [1/5] completed in 10.16 seconds. Average Loss: 95.1468
+2024-11-23 01:12:36,220 - Rank 0 - INFO - Epoch [2/5], Step [1/16], Loss: 4.7937
+2024-11-23 01:12:38,975 - Rank 0 - INFO - Epoch [2/5], Step [11/16], Loss: 3.5842
+2024-11-23 01:12:40,356 - Rank 0 - INFO - Epoch [2/5] completed in 4.66 seconds. Average Loss: 62.5917
+2024-11-23 01:12:40,862 - Rank 0 - INFO - Epoch [3/5], Step [1/16], Loss: 3.0824
+2024-11-23 01:12:43,623 - Rank 0 - INFO - Epoch [3/5], Step [11/16], Loss: 2.6328
+2024-11-23 01:12:45,011 - Rank 0 - INFO - Epoch [3/5] completed in 4.66 seconds. Average Loss: 43.8620
+2024-11-23 01:12:45,526 - Rank 0 - INFO - Epoch [4/5], Step [1/16], Loss: 2.4459
+2024-11-23 01:12:48,299 - Rank 0 - INFO - Epoch [4/5], Step [11/16], Loss: 2.4156
+2024-11-23 01:12:49,689 - Rank 0 - INFO - Epoch [4/5] completed in 4.68 seconds. Average Loss: 38.9232
+2024-11-23 01:12:50,212 - Rank 0 - INFO - Epoch [5/5], Step [1/16], Loss: 2.3381
+2024-11-23 01:12:52,989 - Rank 0 - INFO - Epoch [5/5], Step [11/16], Loss: 2.3373
+2024-11-23 01:12:54,380 - Rank 0 - INFO - Epoch [5/5] completed in 4.69 seconds. Average Loss: 37.5819
+2024-11-23 01:12:54,381 - Rank 0 - INFO - Training completed on Rank 0

@@ -17,8 +17,11 @@
 #module load module load py-torch/2.4.1-CUDA12.4.0-f3vy 
 
 # source /h/h3trinh/ece750/bin/activate 
+module load mpich-3.3.2
+
 
 source /h/h3trinh/.bashrc
+#eval "$(conda shell.bash hook)"
 conda activate /h/h3trinh/condaenvs/vit_env/ 
 #source /h/h3trinh/.bashrc
 #export CUDA_HOME=/pkgs/cuda-11.8
@@ -35,7 +38,7 @@ conda activate /h/h3trinh/condaenvs/vit_env/
 #which python3
 #which python
 
-python test_torch_gpu.py
-
-nvidia-smi
+#python test_torch_gpu.py
+python test_dist.py --deepspeed_config "deepspeed_config.json"
+# nvidia-smi
 

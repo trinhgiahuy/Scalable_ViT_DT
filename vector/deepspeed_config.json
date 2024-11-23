@@ -1,0 +1,23 @@
+{
+  "train_batch_size": 32,
+  "gradient_accumulation_steps": 1,
+  "micro_batch_per_gpu": 16,
+  "fp16": {
+    "enabled": false
+  },
+  "zero_optimization": {
+    "stage": 0,
+    "offload_optimizer": {
+        "device": "none"
+    },
+    "offload_param": {
+        "device": "none"
+    }
+},
+"wall_clock_breakdown": true,
+"prescale_gradients": false,
+"pipeline": {
+    "pipe_partitioned": false
+},
+"pin_memory": true
+}
