@@ -2,9 +2,10 @@
 #SBATCH --job-name=deepspeed_test
 #SBATCH --partition=a40     # Replace with your partition
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --ntasks-per-node=2      # Number of tasks (ranks) per node
-#SBATCH --gres=gpu:2             # Request 2 GPUs
+##SBATCH --ntasks=1
+#SBATCH --ntasks-per-node=4      # Number of tasks (ranks) per node
+#SBATCH --gres=gpu:4             # Request 2 GPUs
+##SBATCH --qos=normal             # Use normal QOS for faster scheduling
 #SBATCH --cpus-per-task=4        # Number of CPUs per task
 #SBATCH --mem=16G                # Memory allocation
 #SBATCH --time=1:00:00           # Max runtime
@@ -23,11 +24,11 @@ export MASTER_ADDR=$(scontrol show hostnames $SLURM_JOB_NODELIST | head -n 1)
 export MASTER_PORT=29500
 
 # Run DeepSpeed with torchrun
-torchrun --nproc_per_node=2 \
+torchrun --nproc_per_node=4 \
          --nnodes=1 \
          --rdzv_id=${SLURM_JOB_ID} \
          --rdzv_backend=c10d \
          --rdzv_endpoint="${MASTER_ADDR}:${MASTER_PORT}" \
-         work_dist_comp.py \
+         work_dist_train.py \
          --deepspeed \
          --deepspeed_config "deepspeed_config.json"
