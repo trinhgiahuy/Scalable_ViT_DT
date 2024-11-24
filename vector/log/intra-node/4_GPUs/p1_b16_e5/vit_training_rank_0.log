@@ -1,0 +1,20 @@
+2024-11-23 20:25:38,898 - Rank 0 - INFO - Epoch [1/5] - Loss: 2.0067, Accuracy: 0.2677
+2024-11-23 20:25:38,915 - Rank 0 - INFO - Epoch [1/5] completed in 314.72 seconds
+2024-11-23 20:28:34,327 - Rank 0 - INFO - Epoch [2/5] - Loss: 1.4964, Accuracy: 0.4389
+2024-11-23 20:28:34,327 - Rank 0 - INFO - Epoch [2/5] completed in 174.19 seconds
+2024-11-23 20:31:24,213 - Rank 0 - INFO - Epoch [3/5] - Loss: 1.3095, Accuracy: 0.5254
+2024-11-23 20:31:24,213 - Rank 0 - INFO - Epoch [3/5] completed in 168.92 seconds
+2024-11-23 20:34:14,243 - Rank 0 - INFO - Epoch [4/5] - Loss: 1.2107, Accuracy: 0.5585
+2024-11-23 20:34:14,244 - Rank 0 - INFO - Epoch [4/5] completed in 169.23 seconds
+2024-11-23 20:37:04,044 - Rank 0 - INFO - Epoch [5/5] - Loss: 1.1195, Accuracy: 0.5952
+2024-11-23 20:37:04,044 - Rank 0 - INFO - Epoch [5/5] completed in 168.91 seconds
+2024-11-23 20:39:28,742 - Rank 0 - INFO - Epoch [1/5] - Loss: 2.0029, Accuracy: 0.2689
+2024-11-23 20:39:28,845 - Rank 0 - INFO - Epoch [1/5] completed in 338.40 seconds
+2024-11-23 20:42:42,108 - Rank 0 - INFO - Epoch [2/5] - Loss: 1.5275, Accuracy: 0.4194
+2024-11-23 20:42:42,108 - Rank 0 - INFO - Epoch [2/5] completed in 191.59 seconds
+2024-11-23 20:45:46,576 - Rank 0 - INFO - Epoch [3/5] - Loss: 1.3251, Accuracy: 0.5158
+2024-11-23 20:45:46,576 - Rank 0 - INFO - Epoch [3/5] completed in 183.65 seconds
+2024-11-23 20:48:51,490 - Rank 0 - INFO - Epoch [4/5] - Loss: 1.2138, Accuracy: 0.5598
+2024-11-23 20:48:51,491 - Rank 0 - INFO - Epoch [4/5] completed in 183.96 seconds
+2024-11-23 20:51:56,210 - Rank 0 - INFO - Epoch [5/5] - Loss: 1.1244, Accuracy: 0.5932
+2024-11-23 20:51:56,210 - Rank 0 - INFO - Epoch [5/5] completed in 183.74 seconds
