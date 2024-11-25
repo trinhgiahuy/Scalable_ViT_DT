@@ -1,0 +1,6 @@
+2024-11-24 21:43:30,724 - Rank 0 - INFO - Epoch [1/5] - Loss: 1.9492, Accuracy: 0.2706
+2024-11-24 21:43:30,725 - Rank 0 - INFO - Epoch [1/5] completed in 1058.60 seconds
+2024-11-24 22:01:23,352 - Rank 0 - INFO - Epoch [2/5] - Loss: 1.5414, Accuracy: 0.4251
+2024-11-24 22:01:23,352 - Rank 0 - INFO - Epoch [2/5] completed in 1072.33 seconds
+2024-11-24 22:19:10,400 - Rank 0 - INFO - Epoch [3/5] - Loss: 1.3795, Accuracy: 0.4942
+2024-11-24 22:19:10,400 - Rank 0 - INFO - Epoch [3/5] completed in 1066.71 seconds
