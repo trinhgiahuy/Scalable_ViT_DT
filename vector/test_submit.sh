@@ -4,7 +4,7 @@
 #SBATCH --partition=t4v2
 #SBATCH --nodes=2
 #SBATCH --ntasks=2
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=16G
 #SBATCH --time=5:00:00
@@ -26,14 +26,18 @@ echo "Head node IP: $head_node_ip"
 # Set environment variables for rendezvous
 export NCCL_DEBUG=INFO
 export NCCL_SOCKET_IFNAME=^lo,docker0
-export OMP_NUM_THREADS=2
+# export OMP_NUM_THREADS=4
 export MASTER_ADDR=$head_node_ip
 export MASTER_PORT=29500
+
+# export TRITON_CACHE_DIR="/tmp/triton_cache_rank_${SLURM_PROCID}"
+# mkdir -p $TRITON_CACHE_DIR
+# export DS_BUILD_FUSED_ADAM=0
 
 # Have to use srun with torchrun
 srun torchrun \
     --nnodes=2 \
-    --nproc_per_node=1 \
+    --nproc_per_node=2 \
     --rdzv_id=$RANDOM \
     --rdzv_backend=c10d \
     --rdzv_endpoint="${MASTER_ADDR}:${MASTER_PORT}" \

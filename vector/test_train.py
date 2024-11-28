@@ -196,5 +196,8 @@ def main():
         if local_rank == 0:
             print(f"Epoch {epoch+1}/{args.epochs}, Loss: {epoch_loss:.4f}")
 
+    if dist.is_initialized():
+        dist.destroy_process_group()
+
 if __name__ == "__main__":
     main()
