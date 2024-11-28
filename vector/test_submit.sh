@@ -1,44 +1,42 @@
 #!/bin/bash
-#SBATCH --job-name=test_code     # Descriptive job name
-#SBATCH --partition=a40          # Use the a40 partition for testing
-#SBATCH --gres=gpu:2             # Request 2 GPUs
-#SBATCH --qos=normal             # Use normal QOS for faster scheduling
-#SBATCH --time=1:00:00           # Limit the test run to 1 hour
-#SBATCH -c 16                    # Request 16 CPU cores
-#SBATCH --mem=32G                # Request 32 GB of memory
-#SBATCH --output=slurm-%j.out    # Save standard output
-#SBATCH --error=slurm-%j.err     # Save standard error
 
-# Load required modules
-# THESE module does not work
-# module load python/3.8.2
-# module load py-torch/2.3.0-py3.10-CUDA12.1.1-7qgk
-#module load modules-u22/1.0 
-#module load module load py-torch/2.4.1-CUDA12.4.0-f3vy 
+#SBATCH --job-name=deepspeed_test
+#SBATCH --partition=t4v2
+#SBATCH --nodes=2
+#SBATCH --ntasks=2
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=16G
+#SBATCH --time=5:00:00
+#SBATCH --output=distributed_%j.out
+#SBATCH --error=distributed_%j.err
 
-# source /h/h3trinh/ece750/bin/activate 
-module load mpich-3.3.2
-
-
+# Activate environment
 source /h/h3trinh/.bashrc
-#eval "$(conda shell.bash hook)"
-conda activate /h/h3trinh/condaenvs/vit_env/ 
-#source /h/h3trinh/.bashrc
-#export CUDA_HOME=/pkgs/cuda-11.8
-#export PATH=$CUDA_HOME/bin:$PATH
-#export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
-#source /h/h3trinh/.bashrc
-#which nvcc
+conda activate /h/h3trinh/condaenvs/vit_env
 
+# Retrieve node information
+nodes=( $(scontrol show hostnames $SLURM_JOB_NODELIST) )
+nodes_array=($nodes)
+head_node=${nodes_array[0]}
+head_node_ip=$(srun --nodes=1 --ntasks=1 -w "$head_node" hostname --ip-address)
 
-#module load pytorch2.1-cuda11.8-python3.9
+echo "Head node IP: $head_node_ip"
 
-#source /h/h3trinh/.bashrc
-# Run the test script
-#which python3
-#which python
+# Set environment variables for rendezvous
+export NCCL_DEBUG=INFO
+export NCCL_SOCKET_IFNAME=^lo,docker0
+export OMP_NUM_THREADS=2
+export MASTER_ADDR=$head_node_ip
+export MASTER_PORT=29500
 
-#python test_torch_gpu.py
-python test_dist.py --deepspeed_config "deepspeed_config.json"
-# nvidia-smi
-
+# Have to use srun with torchrun
+srun torchrun \
+    --nnodes=2 \
+    --nproc_per_node=1 \
+    --rdzv_id=$RANDOM \
+    --rdzv_backend=c10d \
+    --rdzv_endpoint="${MASTER_ADDR}:${MASTER_PORT}" \
+    test_train.py \
+    --deepspeed \
+    --deepspeed_config "deepspeed_config.json"
