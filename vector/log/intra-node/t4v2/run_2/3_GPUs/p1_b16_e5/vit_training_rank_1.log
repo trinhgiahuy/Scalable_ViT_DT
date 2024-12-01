@@ -1,0 +1,10 @@
+2024-12-01 00:53:29,140 - Rank 1 - INFO - Epoch [1/5] - Loss: 1.9631, Accuracy: 0.2763
+2024-12-01 00:53:29,141 - Rank 1 - INFO - Epoch [1/5] completed in 731.80 seconds
+2024-12-01 01:05:34,021 - Rank 1 - INFO - Epoch [2/5] - Loss: 1.5182, Accuracy: 0.4370
+2024-12-01 01:05:34,021 - Rank 1 - INFO - Epoch [2/5] completed in 724.57 seconds
+2024-12-01 01:17:42,917 - Rank 1 - INFO - Epoch [3/5] - Loss: 1.3401, Accuracy: 0.5115
+2024-12-01 01:17:42,917 - Rank 1 - INFO - Epoch [3/5] completed in 728.55 seconds
+2024-12-01 01:29:50,813 - Rank 1 - INFO - Epoch [4/5] - Loss: 1.2332, Accuracy: 0.5513
+2024-12-01 01:29:50,813 - Rank 1 - INFO - Epoch [4/5] completed in 727.56 seconds
+2024-12-01 01:41:54,952 - Rank 1 - INFO - Epoch [5/5] - Loss: 1.1571, Accuracy: 0.5805
+2024-12-01 01:41:54,953 - Rank 1 - INFO - Epoch [5/5] completed in 723.82 seconds
