@@ -1,0 +1,10 @@
+2024-12-09 17:01:24,611 - Rank 4 - INFO - Epoch [1/5] - Loss: 4.7582, Accuracy: 0.0257
+2024-12-09 17:01:24,611 - Rank 4 - INFO - Epoch [1/5] completed in 311.07 seconds
+2024-12-09 17:06:44,282 - Rank 4 - INFO - Epoch [2/5] - Loss: 3.9875, Accuracy: 0.0797
+2024-12-09 17:06:44,283 - Rank 4 - INFO - Epoch [2/5] completed in 319.39 seconds
+2024-12-09 17:12:02,459 - Rank 4 - INFO - Epoch [3/5] - Loss: 3.6337, Accuracy: 0.1349
+2024-12-09 17:12:02,459 - Rank 4 - INFO - Epoch [3/5] completed in 317.92 seconds
+2024-12-09 17:17:20,242 - Rank 4 - INFO - Epoch [4/5] - Loss: 3.3340, Accuracy: 0.1908
+2024-12-09 17:17:20,242 - Rank 4 - INFO - Epoch [4/5] completed in 317.52 seconds
+2024-12-09 17:22:37,988 - Rank 4 - INFO - Epoch [5/5] - Loss: 2.9998, Accuracy: 0.2529
+2024-12-09 17:22:37,988 - Rank 4 - INFO - Epoch [5/5] completed in 317.49 seconds
