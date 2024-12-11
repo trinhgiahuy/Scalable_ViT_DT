@@ -110,7 +110,7 @@ Then run Deepspeed test with (enable `#TEST Deepspeed` option in ./entry_cn.sh)
 mpirun -np 5 --hostfile setup/hosts.txt ./entry_cn.sh h3trinh > deepspeed/run_test_deepspeed.log
 ```
 
-(THE CODE DID NOT WORK YET) Encounter this error, it seems we should not enable fp16 in DeepSpeed
+Note that we encountered this error when running on Tesla0 and Tesla4
 
 ```json
       "_comment": "fp16 is not supported in Tesla0 and Tesla3 ValueError: Type fp16 is not supported", 
@@ -160,33 +160,3 @@ This happens because the loss scale is too high, resulting in values that exceed
  ```sh
  [rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 56.00 MiB. GPU 0 has a total capacity of 7.79 GiB of which 20.75 MiB is free. Process 3441597 has 2.54 GiB memory in use. Process 2618016 has 274.00 MiB memory in use. Process 2618019 has 274.00 MiB memory in use. Process 2618020 has 274.00 MiB memory in use. Including non-PyTorch memory, this process has 4.41 GiB memory in use. Of the allocated memory 3.90 GiB is allocated by PyTorch, and 220.70 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
 ```
-
-TODO
-====
-
-- [x] Initialize deepspeed and test it with dummy distributed matrix multiplcation on 5 machines (deepspeed/test_deepspeed_2.py)
-
-- [x] Update the test to record GPU performance (using GPUtil)
-
-- [x] Write Python script to plot/virtualize from this log
-
-- [x] Adapt the distributed training script into training Vision Transformer
-
-- Strong Scaling (Huy)
-
-We keep the training size fixed (a whole training set of 50 000 images), we just increase the number of GPUs
-
-- [ ] p1_b32_e10 - 1 GPU
-- [ ] p1_b32_e10 - 2 GPUs
-- [x] p1_b32_e10 - 3 GPUs
-- [ ] p1_b32_e10 - 4 GPUs 
-- [ ] p1_b32_e10 - 5 GPUs
-
-- Weak Scaling (Jack)
-We start with 10% of training set and increase into 50%, propotionally to number of GPU. But then how about the batch size per GPU, do we to configure this to make sure the total number of images received by each GPU are same when scaling?
-
-- [ ] p0.1_b32_e10 - 1 GPU
-- [ ] p0.2_b32_e10 - 2 GPUs
-- [ ] p0.3_b32_e10 - 3 GPUs
-- [ ] p0.4_b32_e10 - 4 GPUs
-- [ ] p0.5_b32_e10 - 5 GPUs
