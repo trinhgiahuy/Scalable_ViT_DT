@@ -6,10 +6,14 @@ This directory includes code of distributed training on Nebula Computing Cluster
 
 Create python virtual environment by `python3 -m venv vit_env` then `source vit_env/bin/activate`
 
-Install deepspeed through `pip install deepspeed`
+Install packages through
 
-## TODO
+```sh
+pip install -r requirement.txt
+```
 
-- [ ] Design the benchmarking pipeline for current code (consider OOP worker class)
-- [ ] Pipeline will include tunable/recorded params
+Submit the training script through
 
+```sh
+sbatch submit_distributed_vit_training.sh
+```
